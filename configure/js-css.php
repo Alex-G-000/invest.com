@@ -46,7 +46,7 @@ add_action('wp_enqueue_scripts', 'inv_add_javascript', 100);
 //register STYLES
 add_action('wp_enqueue_scripts', 'inv_register_stylesheets');
 function inv_register_stylesheets() {		
-		$version = '1.2.5';
+		$version = '1.2.6';
 	//core
 	wp_register_style('theme', get_template_directory_uri() . '/css/style.css', array('AOS','invest-icons'), $version, 'all' );
 	wp_register_style('blog', get_template_directory_uri() . '/css/blog.css', array('AOS','invest-icons'), $version, 'all' );
