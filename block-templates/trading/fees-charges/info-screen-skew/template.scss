@@ -1,0 +1,100 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.fees-charges-info-buy {
+
+	overflow-x: hidden;
+
+	h2, h4 {
+		@include media-breakpoint-down (sm) {
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		} 
+	}
+
+	.row {
+		align-items: center;
+	}
+
+	// .block__text
+
+	.block__text {
+		p {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 1.2rem;
+			line-height: 170%;
+			color: $gray-1;
+		}
+
+		h3 {
+			font-style: normal;
+			font-weight: 500;
+			font-size: $h3-font-size;
+			line-height: 130%;				
+		}
+
+		ul {
+			list-style: disc;
+			padding: 0 20px;
+
+			li {
+				font-weight: 500;
+				font-size: 1.2rem;
+				line-height: 170%;
+				color: $gray-1;
+
+				&::marker {
+					color: $green;
+				}
+			}
+		}
+	}
+
+	img {
+		width: auto;
+		max-width: 100%;
+	}
+
+	.block__img-light {
+		display: none;
+	}
+}
+
+.theme-dark .fees-charges-info-buy {
+	.block__text {		
+		h3 {			
+			color: $primary;
+			background: -webkit-linear-gradient(266.4deg, #7FD9FF -34.2%, #923CFF 79.64%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			width: fit-content;	
+			// margin: 0 auto 1.25rem auto;
+		}
+	}
+}
+
+.theme-light .fees-charges-info-buy{
+	.block__text {		
+		p {
+			color: $white;
+		}
+		h3 {			
+			color: $white;
+		}
+	}
+
+	.block__img-light {
+		display: block;
+	}
+
+	.block__img-dark {
+		display: none;
+	}
+
+
+}
+
+
+

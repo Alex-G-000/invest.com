@@ -1,0 +1,18 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.cs-avalible-markets{
+
+    background-color: #FBFBFB;
+    border-radius: 0 0 6.25rem 6.25rem;
+    padding: 7.5rem 0;
+    @include media-breakpoint-down (md) { margin-bottom: 5rem; }
+    @include media-breakpoint-down (sm) { border-radius: 0; }
+    
+}
+
+.theme-dark{
+    .cs-avalible-markets{
+      background-color: #131324;
+    }
+}

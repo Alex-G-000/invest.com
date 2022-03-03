@@ -1,0 +1,146 @@
+@import '../../../scss/_variables';
+@import '../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.about-us {
+
+    &__header {
+        text-align: center;
+    }
+
+    &__slider {
+        position: relative;
+    }
+
+    &__slider-wrapper {
+    }
+
+    &__review {
+        margin-bottom: 30px;
+    }
+
+    &__thumb-slider {
+    }
+
+    &__slider-nav {
+        width: 7.5rem;
+        height: 3rem;
+        display: flex;
+        position: absolute;
+        right: 0;
+        bottom: 30px;
+        flex-direction: row-reverse;
+        @include media-breakpoint-down(md) {
+            right: unset;
+            left: 0;
+        }
+
+        .swiper-button-next, .swiper-button-prev {
+            position: unset;
+            top: unset;
+            width: 3rem; 
+            height: 3rem; 
+            margin-top:0;
+            z-index: 10;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $white;
+            border:1px solid $white;
+            border-radius: 50%;
+          }
+          .swiper-button-next:after, .swiper-button-prev:after {
+            font-size: 1rem;
+          }
+          .swiper-button-prev { margin-right: 1.25rem;}
+    }
+}
+
+
+.review {
+    &__image-wrap {
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 1rem;
+        }
+    }
+    &__image {
+    }
+    &__content-wrap {        
+    }
+
+    &__content {
+        padding-left:3.75rem;
+        padding-bottom: 3.75rem;
+        @include media-breakpoint-down(md) {
+            padding-left:0rem;
+        }
+    }
+
+    &__name {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    &__country {
+        font-size: 1rem;
+        font-weight: 500;
+        color:$gray-1;
+        margin-bottom: 0.5rem;
+    }
+
+    &__rating {
+        margin-bottom: 1.875rem;
+
+        i{
+            color: orange;
+        }
+    }
+
+    &__text {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+}
+
+.thumb-slider {
+    &__wrapper {
+    }
+    &__image-wrap {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: $white;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        &.swiper-slide-thumb-active {
+            &::after { opacity: 0.4 };
+        }
+    }
+    &__image {
+    }
+}
+
+
+
+// --swiper-theme-color: #007aff;
+// --swiper-navigation-size: 44px;
+
+
+.theme-light {
+    .about-us {
+        &__slider-nav {
+            .swiper-button-next, .swiper-button-prev {
+                color: $gray-1;
+                border:1px solid $gray-1;
+            }
+        }
+    }
+}

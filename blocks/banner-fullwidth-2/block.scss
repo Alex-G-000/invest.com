@@ -1,0 +1,100 @@
+@import '../../scss/_variables';
+@import '../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.banner-fullwidth-2 {
+	padding: 0;
+	&__image {
+		position: absolute;
+		bottom: 0;		
+		top:1rem;
+		right: 1rem;
+		left: 1rem;
+		background-position: bottom center !important;
+		background-size: contain !important;
+		background-repeat: no-repeat !important;
+		.theme-light &{
+			background-image:url('../../img/homepage/banner-1-light-min.png');		
+		}
+		.theme-dark &{
+			background-image:url('../../img/homepage/banner-1-dark-min.png');			
+		} 
+		
+	}
+
+	.container {
+
+		@include media-breakpoint-down(xs){
+			background: -webkit-linear-gradient(180deg, #7fd9ff -34.2%, #923cff 79.64%);
+			padding: 25px 15px;
+		}
+
+		.row{
+			background: -webkit-linear-gradient(180deg, #7fd9ff -34.2%, #923cff 79.64%);
+			border-radius: $border-radius;
+			margin: 0;
+
+			@include media-breakpoint-down(xs){
+				background: none;
+				border-radius: 0;
+			}
+
+			> :first-child {
+				padding: 2.813rem 0 2.813rem 3.75rem; //2.813-45px 3.75-60px
+				z-index: 5;	
+				@include media-breakpoint-only(sm){
+					padding: 2.813rem 3.75rem;
+					display: flex;
+					flex-direction: column;
+					align-items: center;					
+				}
+				@include media-breakpoint-down(xs){
+					padding: 15px;
+				}
+			}
+	
+			> :last-child {
+				display: flex;
+				justify-content: center;
+				align-items: center;				
+			}
+		}
+
+		h2 {
+			margin-bottom: 3.125rem; //50px
+			color: $white;
+			// text-transform: capitalize;
+			
+			@include media-breakpoint-down(xs) {
+				font-size: 1.538rem;
+				text-align: center;
+			}
+		}
+
+		.btn {
+			min-width: 11.875rem;
+			padding: 0.75rem 1.5rem;
+		}
+
+		.buy-links {
+			margin-top: 1.875rem; //30px
+
+			> :first-child {
+				margin-right: 1.875rem;
+				@include media-breakpoint-down(xs) {
+					margin-right: 1rem;
+				}
+			}
+		}
+
+		.btn-app {
+			width: 150px;
+			height: 50px;
+			background-color: $black;
+			background-repeat: no-repeat;
+			background-size: 120px;
+			background-position: center;
+		}
+
+		
+	}
+}

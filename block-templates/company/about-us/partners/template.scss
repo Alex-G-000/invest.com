@@ -1,0 +1,58 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.company-about-us-partners {
+	margin-bottom: 10rem;
+
+	.container{
+		padding: 3.125rem 2.188rem;//50 35
+		border-radius: 10px;
+	}
+
+	&__header {
+		padding-bottom: 0;
+	}
+
+	&__images {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 3.125rem;
+		justify-content: center;
+
+		figure {
+			flex-basis: 25%;
+			flex-grow: 0;
+		}
+
+		img {
+			width: auto;
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.company-about-us-partners {
+		.row {
+			>:last-child{
+				margin-top: 50px;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.company-about-us-partners__images {
+		figure {
+			flex-basis: auto;
+			flex-grow: 0;
+		}
+	}
+}
+
+@include media-breakpoint-down(xs) {
+	.company-about-us-partners{
+		.container{
+			border-radius: 0;
+		}
+	}
+}

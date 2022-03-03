@@ -1,0 +1,36 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.trust-secondscreen{
+    background-color: #ECF6FB;
+    .section-header{
+        padding: 0;
+
+        &__header{
+            font-size: 2.188rem;
+        }
+    }
+
+    figure{
+        display: flex;
+        justify-content: center;
+
+        @include media-breakpoint-down(md){
+            height: 300px;
+        }
+        @include media-breakpoint-down(sm){
+            height: 200px;
+        }
+    }
+}
+
+.theme-light{
+    .trust-secondscreen{
+        background-color: #ECF6FB;
+    }
+}
+.theme-dark{
+    .trust-secondscreen{
+        background-color: #131324;
+    }
+}

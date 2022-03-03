@@ -1,0 +1,62 @@
+@import '../../../scss/_variables';
+@import '../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.most-traded {
+    padding: 0;
+    &__content {
+        background: linear-gradient(83.79deg, #744AFF 0.3%, #7BCFFF 102.94%);
+        padding: 2.25rem 1.875rem 1.875rem;
+        border-radius: $border-radius;
+        @include media-breakpoint-down(md) { padding-bottom: .875rem; } 
+    }
+    &__header {
+        .section-header__text { 
+            color: $white !important; 
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        text-align: center;
+    }
+    &__row {
+    }
+    &__col {
+        @include media-breakpoint-down(md) { margin-bottom: 1rem; }       
+    }
+    &__item {
+    }
+}
+
+
+.frame-white {
+    background:$white;
+    color: $text-black;
+    padding: 1.4rem 1rem 1rem 1rem;
+    border-radius: $border-radius;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: stretch;
+    justify-content: space-between;
+
+    &__title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        text-align: left;
+        margin-bottom: 0.75rem;
+    }
+    &__text {
+        font-size: 0.875rem;
+        font-weight: 400;
+        margin-bottom: 0.75rem;
+    }
+    &__button {
+        background:$text-black;
+        width: 100%;
+        // font-size: 0.688rem;
+        font-size: 12px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: auto;       
+    }
+}

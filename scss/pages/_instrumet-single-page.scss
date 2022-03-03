@@ -1,0 +1,184 @@
+
+.page-template-instrumet-single .page__content {    
+    .content-area { 
+        margin-bottom: 5rem;
+        padding-top: 5rem; 
+    }
+}
+
+.instrument {
+
+    &__data {
+    }
+
+    &__numbers {
+    }
+
+    &__buttons {
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__description {
+    }
+}
+
+
+.instrument-data {
+    display: flex;
+    align-items:center;
+    &__icon {
+        width:4.375rem;
+        height:4.375rem;
+        margin-right: 1.5rem;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        font-size: 2.188rem;
+        font-weight: 600;
+    }
+
+    &__description {
+        font-size: 1.563rem;
+        text-transform: uppercase;
+        color:$blog-color;        
+    }
+}
+
+.instrument-numbers {
+
+    &_small {
+        font-size: 0.938rem;
+        font-weight: 400;
+        text-transform: uppercase;        
+    }
+
+    &__big {
+        display: flex;
+        align-items:center;
+        font-size: 1.563rem;
+        font-weight: 400;
+    }
+
+    &__number {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    &__currancy {       
+        padding: 0 1rem;
+    }
+
+    &__difference {
+    }
+}
+
+.instrument-buttons {
+
+    border-bottom:1px solid $border-color;
+
+    &__small {
+        
+        display: flex;
+        font-size: 14px;        
+        margin-bottom: 0.75rem;
+
+        .icon {
+            // &-star {
+            //     background-image: url('../img/icons/star-small.png');
+            // }
+            // &-alert {
+            //     background-image: url('../img/icons/bell-small.png');
+            // }
+           width:12px;
+           height: 12px; 
+           display: inline-block;
+           margin-right: .25rem;
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: 10px;
+        }
+
+        a {
+            color:$white;
+            display: flex;
+            align-items:center;
+            flex-wrap: nowrap;
+
+            .theme-light &{
+                color: $black;
+            }
+        }
+    }
+
+    &__favoutite {        
+        margin-right: 1.5rem;
+    }
+
+    &__alert{      
+    }
+
+    &__main {
+    }
+
+    &__button {
+    }
+}
+
+
+.instrument-description {
+
+    &__title {
+    }
+
+    &__text {
+    }
+}
+
+
+
+.instrument {
+
+    &__info-card {
+    }
+
+    &__widjet-card {
+        height: 308px;
+        overflow: hidden;
+        margin: 0 -1.5rem;
+    }
+}
+
+.info-card {
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        border-bottom:1px solid $border-color;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.875rem 0;
+        font-size: 12px;
+        &:first-child {
+            border-top:1px solid $border-color;
+        }
+    }
+
+    &__text {
+        color:$blog-color;
+        font-size: 12px;
+    }
+
+    &__number {
+        font-size: 12px;
+    }
+}

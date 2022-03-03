@@ -1,0 +1,53 @@
+@import '../../../scss/_variables';
+@import '../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+
+.cta-right { 
+    @include media-breakpoint-down(md){
+        padding: $section-padding-y*2 0;
+    }   
+
+    &__image {
+        position: relative;
+        width: 80%;   
+        margin: auto;
+        &:before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: (434 / 267) * 100%;  
+            background-position: center !important;
+            background-size: contain !important;
+            background-repeat: no-repeat !important;
+            .theme-light &{
+                background-image:url('../../../img/homepage/cta-right-light-min.png');
+                width: 75%;
+            }
+            .theme-dark &{
+                background-image:url('../../../img/homepage/cta-right-dark-min.png');
+                width: 75%;
+            }
+          } 
+        @include media-breakpoint-down(md){
+            width: 60%;
+        }
+        
+    }
+
+    &__content-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    &__header {
+    }
+
+    &__button {
+        margin-right: auto;
+        @include media-breakpoint-down(sm){
+            margin-left: auto;           
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.partnership-page {
+    &__body {
+        padding:6rem 0;
+    }
+    
+}
+
+.partner-program {
+    p {
+        color:$blog-color;
+    }
+    .wp-block-image {
+        padding: 1rem 0;
+    }
+}
+
+
+.theme-light {
+    .partner-program {
+        p {
+            color:$gray-1;
+        }
+    }
+}

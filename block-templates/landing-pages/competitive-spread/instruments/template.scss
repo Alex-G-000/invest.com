@@ -1,0 +1,170 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.cs-instruments{
+    padding: 0;
+    @include media-breakpoint-down (md) { margin-bottom: 5rem; }
+    &__widgets-options{
+        padding: 3.125rem 4.375rem;
+        border-radius: 10px;
+
+        @include media-breakpoint-down (sm) { padding: 30px; }
+        @include media-breakpoint-down (xs) { padding: 20px; }
+    }
+    .section-header{
+        padding-bottom: 0;
+        &__header{
+            font-size: 1.875rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+}
+
+.widget-card-nav {
+    justify-content: space-between;
+    .nav-item {
+        margin-right: 1.375rem;   
+        flex:1;     
+        @include media-breakpoint-down (md) {
+            flex: none;
+            // margin-bottom: 1.31em;
+            margin-right: 0;
+            width: calc(50% - .5rem);
+		} 
+        &:last-child {
+            margin-right: 0; 
+        }
+    }
+    &__link {
+        padding: 2px;       
+        border-radius: 10px;  
+        transition: color 0.3s ease-in-out;   
+        background-color: transparent;                
+    }
+
+    &__link-inner {
+        background-color: transparent;
+        padding: 1.375rem 1rem;        
+        border-radius: 10px;  
+        text-align: center;    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        border: 1px solid #EBEBF6;
+        transition: background-color .3s ease-in-out, border .3s ease-in-out;
+        
+        &:hover{
+            background-color: #fff;
+            border: 1px solid #fff;
+        }
+
+        @include media-breakpoint-down (md) {
+            padding: 0.75rem;
+        }
+    }
+
+    &__icon {
+        width: 50px;
+        height: 50px;        
+        border-radius:50%;
+        margin-bottom: 1.125rem;
+        display: flex;
+        align-items:center;
+        justify-content: center;        
+        svg path {
+            fill:#797C97
+        }
+
+        @include media-breakpoint-down (md) {
+            display: none;
+        }
+    }
+}
+
+.widget-card {
+    &__title {
+        text-transform: capitalize;
+    }
+    .card-header {
+        background: $gradient-light;
+        padding: 1rem 1.875rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    iframe {
+       min-height: 330px;
+    } 
+    select#toShow{
+        height: auto;
+    }     
+}
+
+.theme-light {
+    .widget-card-nav {
+        &__icon {
+            background:$white;
+            transition: background .3s ease-in-out;
+            svg path { transition: fill .3s ease-in-out;}
+        }
+        &__link {
+            // background:$light;
+            color: $white;
+            &:hover {
+                color: #17182E; 
+
+                .widget-card-nav__icon{
+                    background: linear-gradient(108deg, #637CFF 25.48%, #7D56FF 85.58%), #FFFFFF;
+                    svg path { fill:$white; }
+                }
+            }
+            &.active {
+                color: #17182E;
+                // background:$gradient-light;
+                .widget-card-nav__link-inner{
+                    background-color: #fff;
+                border: 1px solid #fff;
+                }
+                svg path { fill:$white; }
+                .widget-card-nav__icon {
+                    background: linear-gradient(108deg, #637CFF 25.48%, #7D56FF 85.58%), #FFFFFF;
+                }
+            }
+        } 
+    }
+}
+
+.theme-dark {
+    .widget-card-nav {
+        &__icon {
+            background:$white;
+            transition: background .3s ease-in-out;
+            svg path { transition: fill .3s ease-in-out;}
+        }
+        &__link {
+            // background:$light;
+            color: $white;
+            &:hover {
+                color: #17182E; 
+
+                .widget-card-nav__icon{
+                    background: linear-gradient(108deg, #637CFF 25.48%, #7D56FF 85.58%), #FFFFFF;
+                    svg path { fill:$white; }
+                }
+            }
+            &.active {
+                color: #17182E;
+                // background:$gradient-light;
+                .widget-card-nav__link-inner{
+                    background-color: #fff;
+                border: 1px solid #fff;
+                }
+                svg path { fill:$white; }
+                .widget-card-nav__icon {
+                    background: linear-gradient(108deg, #637CFF 25.48%, #7D56FF 85.58%), #FFFFFF;
+                }
+            }
+        } 
+    }
+}

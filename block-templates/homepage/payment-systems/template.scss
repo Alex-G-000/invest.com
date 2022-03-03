@@ -1,0 +1,39 @@
+@import '../../../scss/_variables';
+@import '../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.payment-systems {
+	padding: 0;
+    margin-bottom: 0;   
+    .theme-dark &{
+        background:$white;
+    }
+    .theme-light &{
+        background:$white;
+        border-top:1px solid $footer-link;
+    }
+
+    &__header {
+        text-align: center;
+    }
+
+    &__wrapper {        
+        //border-radius: $border-radius;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;    
+        flex-wrap: nowrap;    
+        overflow: hidden;
+        padding: 0.5rem 4.75rem;
+        @include media-breakpoint-down(md) { padding: 0.4rem; flex-wrap: wrap; }       
+    }
+
+    &__item {
+        flex: 1 1 auto;
+        padding: 0.2rem 0.4rem; 
+        @include media-breakpoint-down(sm) { flex: 1 1 19%;  }  
+          
+    }
+
+    &__image {
+    }
+}

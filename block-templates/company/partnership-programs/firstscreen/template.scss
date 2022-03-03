@@ -1,0 +1,17 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.hero{
+    &__img{
+        svg{
+            width: 100%;
+        }
+        @include media-breakpoint-down (sm) {
+            margin-bottom: 1.35rem;
+            svg{
+                width: 250px;
+                height: 250px;
+            }
+		} 
+    }
+}

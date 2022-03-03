@@ -1,0 +1,91 @@
+@import '../../../scss/_variables';
+@import '../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.instruments-firstscreen {     
+    @include media-breakpoint-down(md) {
+        padding: 3rem 0 !important;
+    }
+    .block {  
+        font-size: 1.125rem;  
+        @include media-breakpoint-down(md) {
+            margin-bottom: 1rem;//16
+        }
+        &__col {
+            &:nth-of-type(1){
+                // @include media-breakpoint-down(sm) {
+                //     margin-bottom: $mb-inner;
+                // }
+            }
+        }    
+        &__image{
+            svg{
+                width: 100%;
+            }
+            @include media-breakpoint-down (md) {
+                width: 250px;
+                margin: 0 auto 20px auto;
+                svg{
+                    width: 250px;
+                    height: 250px;
+                }
+            } 
+        }
+        &__title {
+            margin-top: 2rem;
+            @include media-breakpoint-down(sm){
+                width: 100%;
+                text-align: center;
+                font-size: 2rem;
+            }
+        }    
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+        &__text {
+            margin-bottom: $mb-inner;
+            @include media-breakpoint-down(sm){
+                text-align: center;
+            }
+        }    
+        &__bottons {
+            margin-bottom: 1.563rem;
+            @include media-breakpoint-down(sm){
+                text-align: center;
+            }
+        }  
+        &__small {
+            @include media-breakpoint-down(sm){
+                text-align: center;
+            }
+        }  
+       
+    }    
+    .theme-light &{
+        .block__small-link{
+            text-decoration: underline;
+            color: #fff;
+        }
+    }
+    .theme-dark &{
+        background:$gradient-light;
+        .block__small-link{
+            text-decoration: underline;
+            color: #fff;
+        }
+        .block__text { 
+            color: #fff;
+        }
+        .block__title {
+            color: #fff;
+        }
+    }
+}
+
+.parent-pageid-289 {
+    .instruments-firstscreen {
+        padding: $section-padding-y*2 0; 
+    }
+}

@@ -1,0 +1,103 @@
+@import '../../scss/_variables';
+@import '../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.banner-fullwidth-1 {
+	padding: 0;
+
+	&__image {
+		position: absolute;
+		bottom: 0;		
+		padding-top: (370 / 270) * 100%;
+		background-position: bottom center !important;
+		background-size: contain !important;
+		background-repeat: no-repeat !important;
+		.theme-light &{
+			background-image:url('../../img/homepage/banner-2-light-min.png');
+			width: 16rem;
+		}
+		.theme-dark &{
+			background-image:url('../../img/homepage/banner-2-dark-min.png');
+			width: 18rem;
+		} 
+
+		@include media-breakpoint-down(xs) {
+			width: 100%;						
+		}
+		
+        
+	}
+
+	.container {
+		@include media-breakpoint-down(xs){
+			background: -webkit-linear-gradient(180deg, #7fd9ff -34.2%, #923cff 79.64%);
+			padding: 0 15px;
+		}
+
+		.row{
+			background: -webkit-linear-gradient(180deg, #7fd9ff -34.2%, #923cff 79.64%);
+			border-radius: $border-radius;
+			margin: 0;
+
+			@include media-breakpoint-down(xs){
+				background: none;
+				border-radius: 0;
+			}
+
+			> :first-child {
+				padding: 2.813rem 0 2.813rem 3.75rem; //2.813-45px 3.75-60px
+
+				@include media-breakpoint-down(sm) {
+					padding: 2.813rem 3.75rem;
+				}
+				@include media-breakpoint-down(xs) {
+					padding: 40px 30px;
+				}
+			}
+	
+			> :last-child {
+				display: flex;
+				justify-content: center;
+			}
+		}
+
+		h2 {
+			margin-bottom: 3.125rem; //50px
+			color: $white;
+			// text-transform: capitalize;
+
+			@include media-breakpoint-down(xs) {
+				font-size: 1.538rem;
+			}
+		}
+
+		.btn {
+			min-width: 11.875rem;
+			padding: 0.75rem 1.5rem;
+		}
+
+		.buy-links {
+			margin-top: 1.875rem; //30px
+
+			> :first-child {
+				margin-right: 1.875rem;
+
+				@include media-breakpoint-down(sm) {
+					margin-bottom: 1.875rem;
+				}
+			}
+
+			@include media-breakpoint-down(sm) {
+				flex-direction: column;
+			}
+		}
+
+		.btn-app {
+			width: 150px;
+			height: 50px;
+			background-color: $black;
+			background-repeat: no-repeat;
+			background-size: 120px;
+			background-position: center;
+		}
+	}
+}

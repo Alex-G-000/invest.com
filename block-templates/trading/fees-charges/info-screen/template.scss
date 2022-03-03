@@ -1,0 +1,90 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.fees-charges-info {
+	overflow-x: hidden;
+
+		h2 {
+			@include media-breakpoint-down (md) {
+				font-size: 2rem;
+			} 
+			@include media-breakpoint-down (sm) {
+			text-align: center;
+			margin: 0 auto 1.25rem auto;
+			font-size: 2rem;
+			} 
+		}
+
+	.block {
+
+		// .block__text
+
+		&__text {
+			p {
+				font-style: normal;
+				font-weight: 500;
+				font-size: 1.2rem;
+				line-height: 170%;
+				color: $gray-1;
+				margin-bottom: 50px;
+				@include media-breakpoint-down (sm) {
+					text-align: center;
+				} 
+			}
+
+			h3 {
+				font-style: normal;
+				font-weight: 500;
+				font-size: $h3-font-size;
+				line-height: 130%;				
+				margin-bottom: 30px;
+				@include media-breakpoint-down (md) {
+					font-size: 2rem;
+				}
+				@include media-breakpoint-down (sm) {
+					text-align: center;
+					margin: 0 auto 1.25rem auto;
+				} 
+			}
+
+			ul {
+				list-style: disc;
+				padding: 0 20px;
+
+				li {
+					font-weight: 500;
+					font-size: 1.2rem;
+					line-height: 170%;
+					color: $gray-1;
+
+					&::marker {
+						color: $green;
+					}
+				}
+			}
+		}
+
+		&__img {
+			@include media-breakpoint-down (sm) {
+				width: 250px;
+				margin: 0 auto 20px auto;
+			} 
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+.theme-dark .fees-charges-info {
+	.block__text {		
+		h3 {			
+			color: $primary;
+			background: -webkit-linear-gradient(266.4deg, #7FD9FF -34.2%, #923CFF 79.64%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			width: fit-content;		
+		}
+	}
+}

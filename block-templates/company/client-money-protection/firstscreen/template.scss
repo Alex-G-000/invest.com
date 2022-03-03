@@ -1,0 +1,83 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+
+.cmp-first-screen {
+
+	overflow-x: hidden;
+	// padding: 94px 0 145px 0;
+	@include media-breakpoint-down (md) {
+	} 
+
+	&__subtitle {
+		font-size: 1.25rem;
+		line-height: 140%;
+		margin-bottom: 0;
+		@include media-breakpoint-down (sm) {
+			text-align: center;
+		} 
+	
+	}
+
+	&__title{
+		// margin: 0 auto;
+	}
+	
+	// &__under-image {
+	// 	z-index: 0;
+	// 	display: block;
+	// 	position: absolute;
+	// 	border-radius: 50%;
+	// 	background: linear-gradient(90deg, #744AFF 0.3%, #7BCFFF 102.94%);
+	// 	right: 10px;
+	// 	top: 60px;
+	// 	overflow: hidden;
+	// 	height: 0;
+	// 	width: 85%;
+	// 	padding-top: 85%;
+
+	// 	@include media-breakpoint-only (lg) {
+	// 		right: 15px;
+	// 		top: 75px;
+	// 	}
+
+	// 	@include media-breakpoint-down(sm) {
+	// 		right: 4%;
+	// 		top: 8%;
+	// 		width: 75%;
+	// 		padding-top: 75%;
+	// 	}
+
+
+	// }
+
+	&__image {
+		z-index: 2;
+		width: 100%;
+		height: auto;
+		svg {
+			width: 100%;
+		}
+		@include media-breakpoint-down (md) {
+			svg{
+				width: 250px;
+				height: 250px;
+			}
+		} 
+	}
+
+	@include media-breakpoint-down (sm) {
+		&__title {
+			text-align: center;
+			margin: 0 auto;
+		} 
+	}
+
+	@include media-breakpoint-down (md) {
+		&__title {
+			font-size: 2rem;
+		} 
+	}
+
+
+}

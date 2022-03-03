@@ -1,0 +1,259 @@
+//reviews rating
+.star {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-image:url('../img/icons/star.png');
+    background-size:20px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+
+
+//custom stripe widjet
+$widjet-arrow-width:0.4rem;
+$widjet-heigh:50px;
+.stripe-widjet {    
+    height: $widjet-heigh;
+    width:100%;
+    position: relative;
+    overflow: hidden;
+    background:rgba(0, 0, 0, 0.2);
+    
+    &__inner {
+      height: $widjet-heigh;
+      width:150%;
+      position: absolute;
+      left: -$widjet-heigh;
+      top: 0;
+      bottom: 0;
+      display: block;
+    }
+
+    &__item {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: $widjet-heigh;
+      padding: 0 1rem;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    &__change {
+      position: relative;
+      padding-right: 15px;
+      &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 7px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+      }
+      &.up {
+        color:$green;
+        &:before {
+          border-width: 0 $widjet-arrow-width $widjet-arrow-width $widjet-arrow-width;
+          border-color: transparent transparent $green transparent;
+        }
+      }
+      &.down {
+        color:$red;
+        &:before {
+          border-width: $widjet-arrow-width $widjet-arrow-width 0 $widjet-arrow-width;
+          border-color: $red transparent transparent transparent;
+        }
+      }
+    }
+}
+
+.theme-dark {
+  .stripe-widjet { 
+    background: $dropdown-bg;
+  }  
+}
+
+.theme-light {
+  .stripe-widjet { 
+    background:#F5F5F5;
+  }  
+}
+
+
+
+
+
+
+//price arrows
+.up {color:$green;}
+.down {color:$red;}
+
+$arrow-width:0.5rem;
+.arrow-up {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 $arrow-width $arrow-width $arrow-width;
+    border-color: transparent transparent $body-color transparent;
+}
+.arrow-down {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $arrow-width $arrow-width 0 $arrow-width;
+    border-color: $body-color transparent transparent transparent;
+}
+
+.price {  
+  &--up {
+    color:$green;
+    .arrow-up { border-color: transparent transparent $green transparent; }
+  }
+  &--down {
+    color:$red;
+    .arrow-down { border-color: $red transparent transparent transparent; }
+  }
+}
+
+
+
+
+
+//footer icons
+%svg-common {
+  background: url("../img/icons/socials.svg") no-repeat;
+}
+
+.social-icon {  
+
+  display: inline-block;
+
+  &.ds {
+    @extend %svg-common;
+    background-position: 0 0;
+    width: 26px;
+    height: 28px;
+   }
+  
+   &.fb {
+    @extend %svg-common;
+    background-position: 48.148148148148145% 0;
+    width: 28px;
+    height: 28px;
+  }
+  
+  
+  &.insta {
+    @extend %svg-common;
+    background-position: 100% 0;
+    width: 28px;
+    height: 28px;
+  }
+  
+  
+  &.ln {
+    @extend %svg-common;
+    background-position: 0 100%;
+    width: 28px;
+    height: 28px;
+  }
+  
+  &.twitter {
+    @extend %svg-common;
+    background-position: 51.851851851851855% 87.5%;
+    width: 28px;
+    height: 24px;
+  }
+}
+
+
+
+
+//list cards
+.list-cards {
+  &__item {
+      padding: 1.25rem 2.188rem;        
+      display: flex;
+      align-items:center;
+      margin-bottom: 1rem;
+  }
+
+  &__image-wrap {
+      margin-right: 2rem;
+      padding: 0.5rem;
+      border: 1px solid $border-color;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items:center;
+  }
+  &__image {
+      width: 100%;
+      height: auto;
+  }
+
+  &__title {
+      margin-bottom: 0;
+  }
+}
+.theme-light {
+  .list-cards__image-wrap { background: $white; }
+}
+
+
+
+.block-icon--big {
+  width: 5.25rem;
+  height: 5.25rem;
+}
+
+
+.swiper-scrollbar {  
+  background: #eff2f577 !important;
+}
+
+.swiper-scrollbar-drag {  
+  border-radius: 999px;
+  .theme-light &{
+    background: $dark;
+  }
+  .theme-dark &{
+    background: $white;
+  }
+}
+
+
+
+
+.app-links {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items:center;
+  &__col {
+         padding-top: 1rem;            
+         padding-bottom: 1rem;  
+         display: flex;                 
+         flex-direction: column;
+  }
+      &__devider {
+          margin-right: 1.625rem;
+          margin-left: 1.625rem;
+          height: 100%;
+          width: 1px;
+          display: block;
+          background:$white;
+      }
+
+  &__button {
+          &:nth-of-type(1) {
+              margin-bottom: 1rem;
+          }
+  }
+}

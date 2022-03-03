@@ -1,0 +1,55 @@
+.latest-fullwidth {   
+    &__image-col {
+        @include media-breakpoint-down(sm){
+            margin-bottom: 1.5rem;
+        }
+    }   
+    &__text-col {        
+    }
+    &__text {
+        height: 100%; 
+        display: flex;
+        flex-direction: column;
+    }
+    &__thubnail {
+        width: 100%;
+        height: auto;
+    }
+    .post-item:hover {         
+    }
+    .post-item__date {
+        margin-bottom: .5rem;
+        @include media-breakpoint-only(md) {
+            font-size: 13px;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 1.5rem;
+        }  
+    }
+    .post-item__title {   
+        font-size: 2.25rem;     
+        @include media-breakpoint-only(md) {
+            font-size: 1.5rem;
+        }   
+        @include media-breakpoint-down(sm) {
+            font-size: 2.25rem;
+            margin-bottom: 1.75rem;
+        }       
+    }  
+    .post-item__exerpt {
+        @include media-breakpoint-only(md) {
+            font-size: 13px;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 1.75rem;
+        }  
+    }
+    .post-item__readmore {
+        .btn-readmore {            
+            @include media-breakpoint-only(md) {
+                font-size: 13px;
+                line-height: 1.2;
+            }
+        }        
+    }    
+}

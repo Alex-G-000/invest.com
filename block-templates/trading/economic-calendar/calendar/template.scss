@@ -1,0 +1,166 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.calendar{
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 7px;
+
+    &__header{
+        background: $gradient-light;
+        color: $white;
+        padding: 1rem 1.875rem;
+        border-radius: 7px 7px 0 0;
+        gap: 1rem;
+    }
+
+    &__body{
+        padding: 1.875rem;
+        border-radius: 0 0 7px 7px;
+        // max-height: 500px;
+        // overflow: auto;
+
+        .thead-inverse{
+            th{
+                line-height: 4rem;
+                font-weight: normal;
+                color: #9598a1;
+                border: 0;
+                @include media-breakpoint-down(md){
+                    display: none;
+                }
+            }
+        }
+
+        tbody{
+            border-top: 1px solid transparent !important;                             
+
+            @include media-breakpoint-down(md){
+
+                tr{
+                    border-bottom: 1px solid #9598a1;
+                }
+
+                td{
+                    display: flex;
+                    border: 0 !important;
+
+                    &::before {
+                        content: attr(data-th) ": ";
+                        font-weight: bold;
+                        width: 120px;
+                        display: inline-block;
+                        color: #9598a1;
+                    }
+                }
+
+                .calendar__day-title{
+                    display: table-cell;
+                    &::before{
+                        content: '';
+                        width: 0;
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__flag{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+    }
+
+    &__day-title{
+        font-weight: 500;
+    }
+}
+
+.filters{
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    &__button{
+        border: 1px solid $white;
+        border-radius: 12px !important;
+        color: $white !important;
+        background: transparent !important;
+        transition: color .15s ease-in-out !important;
+        gap: 0.5rem;
+        cursor: pointer;
+    
+        path{
+            transition: stroke .15s ease-in-out;
+        }
+    
+        &:hover{
+            color: $black !important;
+    
+            path{
+                stroke: $black;
+            }
+        }
+    }
+}
+
+.datepicker{
+    display: none;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+
+    input{
+        border: 0;
+        padding: .5rem;
+        border-radius: 7px;
+        transition: background-color .15s ease-in-out;
+        outline: 0;
+
+        &:hover{
+            background-color: #f4f4f5;
+        }
+    }
+}
+
+.countries, .categories{
+    .checkbox{
+        flex-shrink: 0;        
+        flex-basis: 33%;
+
+        @include media-breakpoint-down(md){
+            flex-basis: 50%;
+        }
+
+        @include media-breakpoint-down(xs){
+            flex-basis: 100%;
+        }
+
+        input{
+            margin-right: 1rem;
+        }
+    }
+}
+
+.theme-light{
+    .calendar{
+        tbody{
+            td, th{
+                border-bottom: 1px solid #9598a1;
+                border-top: 1px solid #9598a1;
+            }  
+
+            tr:hover{
+                background-color: darken($color: $light, $amount: 3) !important;
+            }
+        } 
+    }
+}
+
+.theme-dark{
+    .calendar{
+        tbody tr:hover{
+            background-color: lighten($color: $dark, $amount: 3) !important;
+        }
+    }   
+}     

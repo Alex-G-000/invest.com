@@ -1,0 +1,29 @@
+.sidebar-banner{
+    &__inner{
+        background: radial-gradient(82.73% 194.94% at 62.7% 59.55%, #001244 0%, #08387E 100%);
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        padding: 1.875rem 2.188rem;
+        align-items: center;
+
+        h2{
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+
+        p{
+            font-size: 1.125rem;
+            margin-bottom: 1.875rem;
+        }
+
+        a{
+            width: 100%;
+        }
+
+        img{
+            width: fit-content;
+            margin-top: 1.875rem;
+        }
+    }
+}

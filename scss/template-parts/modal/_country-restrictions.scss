@@ -1,0 +1,139 @@
+.modal{
+
+    @include media-breakpoint-down(sm) {
+        padding: 0 14px 0 14px !important;
+    }
+
+    .modal-dialog{
+        max-width: 1140px;
+
+        @include media-breakpoint-down(lg) {
+            max-width: 940px;
+        }	
+    
+        @include media-breakpoint-down(md) {
+            max-width: 690px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            max-width: 100%;
+            margin: 0;
+        }
+    }
+
+    .modal-content{
+        border-radius: 25px;
+        border: 1px solid transparent;
+    }
+
+    .close{
+        position: absolute;
+        right: -40px;
+        top: -40px;
+        background: #FFFFFF33;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        color: $white;
+        font-size: 0;
+
+        &:hover{
+            color: white;
+        }
+
+        .theme-light &{
+            background: #00000033;
+        }
+
+        @include media-breakpoint-down(sm) {
+            right: 10px;
+            top: 10px;
+            z-index: 1;
+
+            path{
+                .theme-light &{
+                    stroke: $black;
+                }
+            }
+        }
+    }
+
+    .modal-body{
+        text-align: center;
+
+        @include media-breakpoint-up(lg){
+            padding: 3.75rem 5.625rem;
+        }
+
+        @include media-breakpoint-down(md){
+            padding: 30px 40px;
+        }
+
+        &__title{
+            margin-top: 1.875rem;
+            font-size: 1.875rem;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        &__subtitle{
+            font-size: 1.125rem;
+            @include media-breakpoint-down(md) {
+                margin-bottom: 1rem;//16
+            }
+        }
+
+        form{
+            margin-top: 1.875rem;
+            p{
+                display: flex;
+                align-items: center;
+                background: #ECEDF4;
+                width: fit-content;
+                margin: 0 auto;
+                border-radius: 10px;
+                padding: 8px;
+                border: 1px solid transparent;
+
+                .theme-dark &{
+                    background-color: #292A40;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    flex-direction: column;
+                    align-items: inherit;
+                }
+
+                .wpcf7-email{
+                    border: 1px solid transparent;
+                    background-color: #ecedf4;
+                    outline: none;
+
+                    .theme-dark &{
+                        background-color: #292A40;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        padding: 10px;
+                    }
+                }
+
+                .wpcf7-submit{
+                    margin-left: 15px;
+                    background: linear-gradient(108deg, #637CFF 25.48%, #7D56FF 85.58%);
+                    border: 1px solid transparent;
+                    border-radius: 10px;
+                    padding: 0.75rem 2rem;
+
+                    @include media-breakpoint-down(sm) {
+                        margin-left: 0;
+                    }
+                }
+
+                .wpcf7-spinner{
+                    display: none;
+                }
+            }
+        }
+    }
+}

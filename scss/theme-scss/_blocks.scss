@@ -1,0 +1,18 @@
+// modify default gutenberg blocks inside theme section-blocks here
+
+.block {
+
+    .wp-block-image {
+        margin-bottom: 0;
+    } 
+
+    &__title {
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+        }
+    }
+  
+
+}
+
+

@@ -1,0 +1,97 @@
+@import '../../../scss/_variables';
+@import '../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.terms-and-conditions-extra-charges {
+
+	padding: 120px 0;
+	overflow-x: hidden;
+
+	.row {
+		align-items: center;
+	}
+
+	h4 {
+		margin-bottom: 40px;
+	}
+
+	// .block__text
+
+	.block__text {
+		p {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 1.2rem;
+			line-height: 170%;
+			color: $gray-1;
+		}
+
+		h3 {
+			font-style: normal;
+			font-weight: 700;
+			font-size: $h3-font-size;
+			line-height: 130%;	
+			margin-bottom: 20px;			
+		}
+
+		ul {
+			list-style: disc;
+			padding: 0 20px;
+
+			li {
+				font-weight: 500;
+				font-size: 1.2rem;
+				line-height: 170%;
+				color: $gray-1;
+
+				&::marker {
+					color: $green;
+				}
+			}
+		}
+	}
+
+	img {
+		width: auto;
+		max-width: 100%;;
+	}
+
+	.block__img-light {
+		display: none;
+	}
+}
+
+.theme-dark .terms-and-conditions-extra-charges {
+	.block__text {		
+		h3 {			
+			color: $primary;
+			background: -webkit-linear-gradient(266.4deg, #7FD9FF -34.2%, #923CFF 79.64%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			width: fit-content;		
+		}
+	}
+}
+
+.theme-light .terms-and-conditions-extra-charges {
+	.block__text {		
+		p {
+			color: $white;
+		}
+		h3 {			
+			color: $white;
+		}
+	}
+
+	.block__img-light {
+		display: block;
+	}
+
+	.block__img-dark {
+		display: none;
+	}
+
+
+}
+
+
+

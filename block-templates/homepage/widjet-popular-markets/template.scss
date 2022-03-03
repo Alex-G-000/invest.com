@@ -1,0 +1,78 @@
+@import '../../../scss/_variables';
+@import '../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.popular-markets.block {
+
+    .block {
+        &__header {
+            text-align: center;       
+        }
+    
+        &__content-col {
+            @include media-breakpoint-down (md) { order: 2; }
+        }
+    
+        &__data-col {
+            @include media-breakpoint-up(lg){ padding-left: 3rem; }
+            @include media-breakpoint-down (md) {
+                order: 1;
+                margin-bottom: 2rem;
+                min-height: 400px;
+            }
+        }
+
+        &__data {
+            height: 400px;
+        }
+    
+        &__table {
+            line-height: 2.125rem;
+            max-width: 100%;
+            overflow: hidden;
+            
+            .btn-table {
+                line-height: 2.125rem;
+            }
+            .tdata-name {
+                text-align: left;
+            }
+            .tdata-icon {
+                width:2.125rem;
+                height:2.125rem;
+                object-fit: cover;
+                border-radius: 50%;
+                margin-right: $table-cell-padding;
+            }
+        }
+    
+        &__list {
+            margin-bottom: 4.125rem;
+        }
+    
+        &__button-wrap {
+            @include media-breakpoint-down(sm){
+               text-align: center;
+            }
+        }
+
+        &__button {
+            margin-bottom: $mb-inner; 
+            @include media-breakpoint-down(sm){
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    
+        &__buy-links {
+            
+        }
+        
+    }
+}
+
+
+.tdata-sell, .tdata-chg {
+    @include media-breakpoint-down (sm) {
+        display: none;
+    }
+}

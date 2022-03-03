@@ -1,0 +1,67 @@
+@import '../../scss/_variables';
+@import '../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.accordion-block {
+    .accordion {
+        &>.card {
+            margin-bottom: .75rem;
+            border-radius: $border-radius;            
+        }
+        .card-header {
+            cursor: pointer;
+            position: relative;
+            overflow-anchor: none;
+            .card-txt {
+                transition: color 0.5s ease-in-out;
+                padding-right: 2rem;
+            }    
+            &:hover {
+                .card-txt {
+                    color:$white;
+                }
+            }
+
+            &::before{
+                position: absolute;
+                display: block;
+                right: $card-spacer-x;
+                top: $card-spacer-y;
+                flex-shrink: 0;
+                width: 1.25rem;
+                height: 1.25rem;
+                margin-left: auto;
+                content: "";
+                background-image: $accordion-button-icon;
+                background-position: center;
+                transform: rotate(-180deg);
+                background-repeat: no-repeat;
+                background-size: 1.25rem;
+                transition: transform .2s ease-in-out;
+            }
+        }
+        .card-header.collapsed {
+            &::before{     
+                transform: rotate(0deg);               
+            }
+
+        }
+    }
+
+    
+    
+}
+
+
+.theme-light {
+    .accordion-block {
+        .accordion {           
+            .card-header {          
+                &:hover {
+                    .card-txt {
+                        color:$blue;
+                    }
+                }               
+            }            
+        }      
+    }    
+}

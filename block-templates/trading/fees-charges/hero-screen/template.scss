@@ -1,0 +1,103 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.hero {
+	background: $dark;
+	position: relative;
+	padding: 180px 0;
+		@include media-breakpoint-down (sm) {
+			padding: 60px 0 40px 0;
+		} 
+
+	&__content-col {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__image-col-box {
+		max-width: 458px;
+		width: 100%;
+		position: relative;
+		margin: 0 auto;
+		@include media-breakpoint-down (sm) {
+			width: 250px;
+			margin: 0 auto 20px auto;
+		} 
+	}
+
+	&__image-circle {
+		z-index: 0;
+		display: block;
+		position: absolute;
+		border-radius: 50%;
+		background: linear-gradient(90deg, #744AFF 0.3%, #7BCFFF 102.94%);
+		right: 0;
+		left: 0;
+		top: 11%;
+		overflow: hidden;
+		height: 0;
+		width: 70%;
+		padding-top: 70%;
+		margin: 0 auto;
+	}
+
+	&__title {
+		font-size: 3.75rem;
+		line-height: 130%;
+		font-weight: 600;
+		@include media-breakpoint-down (sm) {
+			text-align: center;
+			margin: 0 auto;
+		} 
+		@include media-breakpoint-down (md) {
+			font-size: 2rem;
+		} 
+	}
+
+	&__subtitle {
+		margin-bottom: $mb-inner;
+		font-size: 2.75rem;
+		font-weight: 500;
+		@include media-breakpoint-down (sm) {
+			text-align: center;
+		} 
+		@include media-breakpoint-down (md) {
+			font-size: 1.5rem;
+		} 
+	}
+
+	&__text {
+		color: $gray-1;
+		font-size: $h4-font-size;
+		@include media-breakpoint-down (sm) {
+			text-align: center;
+		} 
+	}
+
+	&__image-col {
+		position: relative;
+	}
+
+	&__image {
+		z-index: 2;
+		width: 100%;
+		height: auto;
+	}
+}
+
+@include media-breakpoint-down (md) {
+	.fees-charges .wp-block-image img {
+   	 max-width: 100% !important;
+	}
+} 
+
+
+
+.theme-light {
+	.hero {
+		&__image-circle {
+			background: $darker;
+		}
+	}
+}

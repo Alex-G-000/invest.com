@@ -1,0 +1,41 @@
+@import '../../../scss/_variables';
+@import '../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.hero {
+	position: relative; 
+	padding: 120px 0 0 0;
+	overflow-x: hidden;
+
+	&__content-col {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__image-col-box {
+		max-width: 458px;
+		width: 100%;
+		position: relative;
+		margin: 0 auto;
+	}
+
+	&__title {
+		font-size: 3.65rem;
+		line-height: 130%;
+		font-weight: 600;
+	}
+
+	&__subtitle {
+		margin-bottom: $mb-inner;
+		font-size: 1.0625rem;
+		font-weight: 500;
+		line-height: 150%;
+		color: $gray-1;
+	}
+}
+
+.hero__image img {
+	@include media-breakpoint-up(xl) {
+		max-width: inherit;
+	} 
+}

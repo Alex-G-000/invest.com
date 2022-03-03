@@ -1,0 +1,42 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+
+.block-chain {
+
+	&__title {
+		margin-bottom: 0;
+		padding-bottom: 20px;
+		@include media-breakpoint-down (md) {
+				font-size: 2rem;
+		}
+	}
+
+	&__subtitle {
+		font-size: 1.25rem;
+		margin: 0;
+		font-weight: 500;
+		color: $gray-1;
+	}
+
+	&__box {
+		background: $dark-1;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 14.4742px;
+		padding: 50px 60px 0 60px;
+		margin-top: 50px;
+		@include media-breakpoint-down (md) { 
+			padding: 1.25rem;
+		}
+	}
+
+
+}
+
+.theme-light .block-chain {
+
+	&__box {
+		background: $light;
+	}
+
+}

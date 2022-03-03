@@ -1,0 +1,61 @@
+@import '../../../blog-scss/_variables-blog';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.banner-blog-fullwidth-1{
+    padding: 3.5rem !important;
+    background: radial-gradient(82.73% 194.94% at 62.7% 59.55%, #2B3553 0%, #1C2336 100%);
+    border-radius: 15px;
+    overflow: hidden;
+
+    &__inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        div{
+            z-index: 1;
+        }
+
+        h2{
+            font-weight: 400;
+            font-size: 2.5rem;
+        }
+
+        p{
+            font-size: 1.375rem;
+            margin-bottom: 0;
+        }
+
+        img{
+            position: absolute;
+            right: 18rem;
+            top: -1.875rem;
+            height: 16.875rem;
+        }
+
+        a{
+            padding: 0.75rem 6.25rem;
+            z-index: 1;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .banner-blog-fullwidth-1{
+        &__inner{
+            flex-direction: column;
+            gap: 25px;
+    
+            img{
+                position: initial;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .banner-blog-fullwidth-1{
+        padding: 2.308rem 3.077rem !important;
+    }
+}

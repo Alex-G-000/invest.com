@@ -1,0 +1,38 @@
+.horizontal-small {
+  
+    &__inner {}
+    &__image-wrap {
+        @include media-breakpoint-only(md){
+            display: none;
+        }
+    }
+
+    &__image {
+        width: 84px;
+        height: 84px;
+        object-fit: cover;
+    }
+
+    &__text-wrap {
+        flex-grow: 1;
+    }
+
+    &__title {
+        font-weight: 500;
+    }
+
+    &__info {
+    }
+
+    &__date {
+    }
+
+    &__link {
+        font-size: 14px;
+        text-transform: capitalize;
+        font-weight: 600;        
+        @include media-breakpoint-down(xs){
+            display: none;
+        }
+    }
+}

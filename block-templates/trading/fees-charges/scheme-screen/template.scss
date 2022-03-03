@@ -1,0 +1,189 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+
+.fees-charges {
+
+
+
+	// .block__title
+
+	.block__title {
+		text-align: center;
+		margin-bottom: 6rem;
+		@include media-breakpoint-down (md) {
+			font-size: 1.8rem;
+		}
+		span {
+			text-align: center;
+			width: 100%;
+			display: block;
+			line-height: 150%;
+		}
+	}
+
+	.scheme-trading {
+
+		.row {
+			margin-top: 95px;
+		}
+
+		// .scheme-trading__list
+
+		&__list {
+			display: flex;
+			flex-direction: column;
+			max-width: 384px;
+			width: 100%;
+			margin: 0 auto;
+
+			@include media-breakpoint-down (lg) {
+				max-width: 310px;
+			}
+		}
+
+		// .scheme-trading__item
+
+		&__item {
+			position: relative;
+			background: $dark-1;
+			border: 1px solid $border-color;
+			box-sizing: border-box;
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			padding: 26px 46px;
+			margin-bottom: 35px;
+			min-height: 98px;
+			flex-wrap: wrap;
+			align-content: center;
+
+			@include media-breakpoint-down (lg) {
+				padding: 1.7rem;
+			}
+
+			@include media-breakpoint-down (md) {
+				justify-content: flex-start;
+				align-items: flex-start;
+				padding: 10px 0 10px 60px;
+				min-height: 70px;
+			}
+
+			span {
+				font-style: normal;
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 110%;
+				color: #FFFFFF;
+
+				@include media-breakpoint-down (lg) {
+					font-size: 16px;
+				}
+			}
+
+			.icon {
+				background: $dark-1;
+				border: 1px solid $border-color;
+				box-sizing: border-box;
+				border-radius: 10px;
+				width: 60px;
+				height: 60px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: -30px;
+
+				@include media-breakpoint-down (lg) {
+					width: 40px;
+					height: 40px;
+					left: -25px;
+
+					svg{
+						width: 24px;
+						height: 24px;
+					}
+				}
+
+				@include media-breakpoint-down (md) {
+					left: 10px;
+					right: unset;
+				}
+
+				img {
+					width: 38px;
+					height: 38px;
+
+					@include media-breakpoint-down (lg) {
+						width: 19px;
+						height: 19px;
+					}
+				}
+
+				.icon-light {
+					display: none;
+				}
+			}
+		}
+
+	}
+
+}
+
+
+
+
+
+
+
+.theme-light .fees-charges {
+	.scheme-trading__item .icon {
+		.icon-light {
+			display: block;
+		}
+
+		.icon-dark {
+			display: none;
+		}
+	}
+
+	.scheme-trading__number span,
+	.scheme-trading__number p,
+	.scheme-trading__item span {
+		color: $darker;
+	}
+
+	.scheme-trading__item {
+		background: #EFF2F5;
+		box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+		border: none;
+	}
+
+	.scheme-trading__item .icon {
+		background: linear-gradient(108deg, #637CFF 25.48%, #7D56FF 85.58%);
+		box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.18);
+
+		svg path{
+			fill: $white;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.fees-charges {
+		.wp-block-image img {
+			max-width: 50%;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.fees-charges {
+		.wp-block-image img {
+			max-width: 50%;
+		}
+	}
+}

@@ -1,0 +1,106 @@
+@import '../../../scss/_variables';
+@import '../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.hero {   
+    // background:$dark;
+    position: relative;
+    padding-bottom: 0;
+    overflow-x: hidden;
+    
+    &__content-col {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        //align-items:center;
+		// justify-content: space-between;
+        &:first-child{
+            @include media-breakpoint-down(sm){
+                text-align: center;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 4.688rem; 
+        font-weight: 600;   
+        @include media-breakpoint-only (md) {
+            font-size: 4rem;
+        }
+        @include media-breakpoint-down(sm){
+			text-align: center;
+            margin: 0 auto 1rem auto;
+            font-size: 3.25rem;
+		}
+    }
+
+    &__subtitle {
+        margin-bottom: $mb-inner;
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.4;
+        @include media-breakpoint-down(sm){
+			text-align: center;
+		}
+    }
+
+    &__btn {
+        margin-right: auto;           
+        @include media-breakpoint-down (md) {
+            margin-bottom: 1.875rem;
+			margin-top: 1.875rem;
+        }
+        @include media-breakpoint-down(sm){
+			margin: 0 auto;
+		}
+        //flex: none;
+    }
+
+    &__app-links {
+        //margin-bottom: 1.875rem;
+		margin-bottom: 0;
+        margin-top: 1.87rem;
+    }
+
+    &__link {
+        text-decoration: underline;
+    }
+
+    &__image-col {
+        position: relative;
+    }
+
+    &__image {
+        z-index: 2;    
+        position: relative;
+        &:before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: (697 / 562) * 100%;
+        }
+        @include media-breakpoint-down (md) {
+            width: 250px;
+            margin: 20px auto;
+		} 
+        > .inner-image {           
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-position: center !important;
+            background-size: contain !important;
+            background-repeat: no-repeat !important;
+            .theme-light &{
+                background-image:url('../../../img/homepage/firstscreen-light-min.png');
+            }
+            .theme-dark &{
+                background-image:url('../../../img/homepage/firstscreen-dark-min.png');
+            }
+        }
+    } 
+}
+
+
+
+

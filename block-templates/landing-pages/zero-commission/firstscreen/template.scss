@@ -1,0 +1,136 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.zc-fistscreen {  
+    position: relative;
+    background-color:$primary;  
+    
+    .container{
+        padding-top: 5rem;
+        padding-bottom: 5vh;
+        @include media-breakpoint-up(lg){
+            padding-top: 20vh;         
+        }     
+        
+    }  
+   
+    
+    .block {
+
+        &__bg {
+            position: absolute;
+            left: 0; right: 0;
+            top: 0; bottom: 0;
+            display: block;  
+            background-position:center;
+            background-repeat:no-repeat;
+            background-size:cover;
+            z-index: -1;         
+		}
+
+        &__content-col{}
+
+        &__image-col{
+            z-index: -1;
+            position: relative;
+        }
+
+        &__image{
+            position: relative;            
+            figure {
+                position: relative;
+                z-index: 5;
+                @include media-breakpoint-up(lg){
+                    margin-right: -18vw;
+                    margin-left: -10vw;
+                    margin-top: -9vh;            
+                }
+                @include media-breakpoint-only(lg){
+                    margin-right: -18vw;
+                    margin-left: -10vw;
+                    margin-top: -16vh;  
+                }
+                @include media-breakpoint-only(md){
+                    margin-right: -10vw;
+                    margin-left: -5vw;
+                    // margin-top: -5vh;            
+                }
+                @include media-breakpoint-down(sm){
+                    margin-right: -30%;
+                    margin-left: 0;
+                    margin-top: 5rem;
+                }
+            }
+
+            &-under{
+                position: absolute;
+                display: block;
+                top: 100%;
+                left: 100%;
+                z-index: 1;
+                width: 400%;
+                height: 400%;               
+                transform: translate(-61%, -59%) !important;                   
+                // transition: opacity 3s ease-in; 
+                // transition-delay: 2s;         
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }            
+
+           
+        }
+        
+
+        
+       
+		&__title {            
+            font-size: 3.75rem;
+
+            @include media-breakpoint-up(lg){
+                margin-right: -4rem;
+            }
+            @include media-breakpoint-only(lg){
+                font-size: 3.4rem;
+            }
+            @include media-breakpoint-down(md){
+                font-size: 2.6rem;
+            }
+           
+		}
+
+		&__subtitle {
+            font-size: 1.25rem;
+            @include media-breakpoint-down(sm){
+                text-align: center;
+            }
+		}
+
+		
+
+    }
+
+    &.skewed-section {
+
+        $skew-margin: -3vw;
+        overflow: hidden;
+        padding-top: $section-padding-y*2;        
+        padding-bottom: $section-padding-y*3;        
+        margin-top: $skew-margin;
+
+        @include media-breakpoint-up(lg){
+            padding-top: $section-padding-y*2;        
+            padding-bottom: $section-padding-y*3;    
+        }
+
+        .block__bg{
+            transform: skewY(-$section-skew-deg);
+            bottom: $skew-margin;
+        }
+
+    }
+    
+}
+
+

@@ -1,0 +1,66 @@
+@import '../../../scss/_variables';
+@import '../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.cta-video {
+
+    padding-top:$section-padding-y*2;
+    padding-bottom:0;
+
+    &__content-col {
+        display: flex;
+        align-items: center;
+        @include media-breakpoint-down (md) {margin-bottom: $mb-inner; }
+        padding-bottom:$section-padding-y;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        @include media-breakpoint-up(md){
+            padding-right: 3rem;
+        }
+       
+        
+    }
+
+    &__header {
+    }
+
+    &__button {
+        margin-right: auto;
+        margin-bottom: 2.375rem;
+        @include media-breakpoint-down(sm){
+            margin-left: auto;         
+        }
+    }
+
+    &__buy-links {
+    }   
+
+    &__image-col { 
+        overflow: hidden;
+    }
+
+    &__image {       
+        width: 80%;
+        margin: auto;
+        &:before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: (370 / 270) * 100%;
+            background-position: bottom center !important;
+            background-size: contain !important;
+            background-repeat: no-repeat !important;
+            .theme-light &{
+                background-image:url('../../../img/homepage/cta-video-light-min.png');
+            }
+            .theme-dark &{
+                background-image:url('../../../img/homepage/cta-video-dark-min.png');
+            } 
+        } 
+        @include media-breakpoint-down(md){           
+            width: 60%;          
+        }            
+    }
+}

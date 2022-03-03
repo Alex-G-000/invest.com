@@ -1,0 +1,225 @@
+// colors
+$primary: #764DFF;
+$primary-hover: #923CFF;
+$primary-darker:#7D57FF;
+$secondary: #ffffff;
+
+$green: #2DB071;
+$blue: #2F9BFF;
+$blue-1: #7BCFFF;
+
+$gray-1: #797C97;
+$blog-color:#ABB6D8;
+$light:#F4F4F5;
+$footer-link:#D9DBE1;
+$footer-copyright:#8C8C8C;
+
+$dark: #17182E;
+$dark-1: #17182E;
+// $dark-1: #12233A;
+$darker: #0C0E20;
+$text-color-dark:#282844;
+$text-black:#0C0C0C;
+
+$black: #000;
+$white: #ffffff;
+
+// $gradient-light: linear-gradient(90deg, #9B7DFF 25.48%, #764DFF 85.58%);
+$gradient-light: linear-gradient(90deg, #637CFF 25.48%, #7D56FF 85.58%);
+
+
+$border-color:#6F8FBB;
+$link-color: #2F9BFF;
+
+$theme-colors: (
+  "primary": $primary,  
+  "secondary": $secondary  
+);
+
+//body-colors
+$body-bg:$darker;
+$body-color: $white;
+
+
+
+
+//// * CUSTOM VARIABLES * ////
+//sections and headers
+$section-padding-y: 3rem;    
+$section-margin-bottom: 8rem;   
+$section-skew-deg:-3deg;
+
+//other
+$mb-inner:2.5rem;     //40px
+$mb-outer:4.375rem;   //70px
+$mb-large:5.625rem;   //90px
+
+
+//// * Bootstrap variables * ////
+
+//bootstrap spacers modify. 
+$spacers: (
+  "0": 0, 
+  "1": 0.5rem,      //8px
+  "2": 1rem,        //16px
+  "3": 1.375rem,    //22px
+  "4": 1.875rem,    //30px
+  "5": 2.5rem       //40px 
+);
+
+// defauly <p> styling
+$paragraph-margin-bottom: 1rem;
+
+// borders
+$border-radius: 8px;
+
+// fonts 
+$font-family-sans-serif: 'Poppins', sans-serif;
+$font-weight-normal:  500;
+$font-weight-bold: 600;
+$font-weight-bolder: 700;
+
+$font-size-base: 1rem;
+$h1-font-size: 4.063rem;
+$h2-font-size: 3.125rem;
+$h3-font-size: 1.563rem;
+$h4-font-size: 1.25rem;
+$h5-font-size: 1rem;
+$small-font-size: 13px;
+$headings-margin-bottom: 1.063rem;
+$headings-font-weight: 600;
+$headings-line-height: 1.1;
+
+$line-height-base: 1.4;
+$line-height-lg: 1.4;
+$line-height-sm: 1.4;
+
+// forms 
+$input-btn-padding-y: 0.5rem;     
+$input-btn-padding-x: 1rem;
+$input-btn-font-size: 0.8rem;
+$input-color: $body-color;
+$input-btn-focus-box-shadow: 0 0 0.3rem 0.3rem #6f8fbb4f;
+
+
+$input-font-size: 1rem;
+$input-font-weight: 400;
+$input-line-height: 2;
+$input-placeholder-color: $blog-color;
+
+$input-bg: $darker;
+$input-disabled-bg: $black;
+
+$input-border-radius: 8px;
+$input-border-color: transparent;
+$input-focus-border-color: $border-color;
+
+
+
+
+
+//links
+// $link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: none;
+
+
+// buttons 
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 3rem;
+// $btn-padding-x: 2.75rem;
+$btn-font-size: 1.125rem;
+$btn-line-height: 1.4rem;
+$btn-font-weight: 700;
+
+$btn-padding-y-lg: 1rem;
+$btn-padding-x-lg: 4rem;
+$btn-font-size-lg: $btn-font-size;
+
+$btn-font-weight: 700;
+$btn-border-radius: 12px;
+$btn-border-radius-lg: 12px;
+
+
+//navbar
+$navbar-link-font-size: 1.125rem;
+$nav-link-padding-y: 1rem;
+$nav-link-padding-x: 0.875rem;
+$navbar-nav-link-padding-x: 0.875rem;
+// $navbar-padding-y: 1.875rem;
+// $navbar-padding-x: 1rem;  
+
+$navbar-dark-color: rgba($white, .95);            
+$navbar-dark-hover-color: $primary;
+$navbar-dark-active-color: $primary;
+
+$navbar-light-color: $text-color-dark;
+$navbar-light-hover-color: $primary;
+$navbar-light-active-color: $primary;
+
+
+//drpdowns 
+$dropdown-link-color: $body-color;
+$dropdown-link-hover-color: $primary;
+$dropdown-link-hover-bg: transparent;
+$dropdown-link-active-color: $primary;
+$dropdown-link-active-bg: transparent;
+$dropdown-bg: #23243F;
+// $dropdown-padding-x:
+$dropdown-item-padding-y: .35rem;
+$dropdown-item-padding-x: 2rem;
+
+
+// breakpoints 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1300px
+);
+
+
+// container 
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px
+);
+
+ 
+// Tables
+$table-cell-padding:          .813rem;
+$table-cell-padding-sm:       .3rem;
+$table-color:                 $gray-1;
+$table-bg:                    $dark-1;
+$table-accent-bg:            #1A2F4B;
+$table-hover-bg:             #1A2F4B;
+$table-border-color:          $border-color;
+$table-head-bg:               #1A2F4B;
+$table-head-color:            $white;
+$table-th-font-weight: 400;
+
+$table-dark-color:            #6F8FBB;
+$table-dark-bg:               $dark-1;
+$table-dark-accent-bg:        #1A2F4B;
+$table-dark-hover-color:      $table-dark-color;
+$table-dark-hover-bg:         #1A2F4B;
+$table-dark-border-color:     $border-color;
+
+
+
+// Cards
+$card-spacer-y:                     1.5rem;
+$card-spacer-x:                     1.875rem;
+$card-cap-bg:                       rgba($black, .05);
+$card-cap-color:                    $blog-color;
+$card-color:                        $blog-color;
+$card-bg:                           $dark-1;
+
+$accordion-button-icon: url("data:image/svg+xml,%3Csvg width='22' height='13' viewBox='0 0 22 13' fill='%232F9BFF' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.1416 12.5739L0.35146 2.7836C0.124844 2.55717 -9.85645e-08 2.25489 -8.4476e-08 1.93259C-7.03876e-08 1.61028 0.124844 1.30801 0.351461 1.08157L1.07227 0.360583C1.54196 -0.108568 2.30533 -0.108568 2.7743 0.360583L10.9954 8.58172L19.2257 0.351461C19.4523 0.125024 19.7544 8.63493e-07 20.0765 8.77573e-07C20.399 8.9167e-07 20.7011 0.125024 20.9279 0.351461L21.6485 1.07245C21.8752 1.29906 22 1.60116 22 1.92347C22 2.24577 21.8752 2.54805 21.6485 2.77448L11.8495 12.5739C11.6222 12.8009 11.3186 12.9255 10.996 12.9248C10.6721 12.9255 10.3687 12.8009 10.1416 12.5739Z'/%3E%3C/svg%3E%0A");
+$accordion-button-icon-white: url("data:image/svg+xml,%3Csvg width='22' height='13' viewBox='0 0 22 13' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.1416 12.5739L0.35146 2.7836C0.124844 2.55717 -9.85645e-08 2.25489 -8.4476e-08 1.93259C-7.03876e-08 1.61028 0.124844 1.30801 0.351461 1.08157L1.07227 0.360583C1.54196 -0.108568 2.30533 -0.108568 2.7743 0.360583L10.9954 8.58172L19.2257 0.351461C19.4523 0.125024 19.7544 8.63493e-07 20.0765 8.77573e-07C20.399 8.9167e-07 20.7011 0.125024 20.9279 0.351461L21.6485 1.07245C21.8752 1.29906 22 1.60116 22 1.92347C22 2.24577 21.8752 2.54805 21.6485 2.77448L11.8495 12.5739C11.6222 12.8009 11.3186 12.9255 10.996 12.9248C10.6721 12.9255 10.3687 12.8009 10.1416 12.5739Z'/%3E%3C/svg%3E%0A");
+$accordion-button-icon-gray: url("data:image/svg+xml,%3Csvg width='22' height='13' viewBox='0 0 22 13' fill='%23999' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.1416 12.5739L0.35146 2.7836C0.124844 2.55717 -9.85645e-08 2.25489 -8.4476e-08 1.93259C-7.03876e-08 1.61028 0.124844 1.30801 0.351461 1.08157L1.07227 0.360583C1.54196 -0.108568 2.30533 -0.108568 2.7743 0.360583L10.9954 8.58172L19.2257 0.351461C19.4523 0.125024 19.7544 8.63493e-07 20.0765 8.77573e-07C20.399 8.9167e-07 20.7011 0.125024 20.9279 0.351461L21.6485 1.07245C21.8752 1.29906 22 1.60116 22 1.92347C22 2.24577 21.8752 2.54805 21.6485 2.77448L11.8495 12.5739C11.6222 12.8009 11.3186 12.9255 10.996 12.9248C10.6721 12.9255 10.3687 12.8009 10.1416 12.5739Z'/%3E%3C/svg%3E%0A");
+
+
+

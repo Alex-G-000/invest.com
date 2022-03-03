@@ -1,0 +1,27 @@
+
+.contact-us-icons {
+    .block{
+        &__title {
+            font-size: 1.5rem;
+        }
+        &__subtitle {
+            font-size: 1.25rem;
+        }
+        &__text {
+            font-size: 1.25rem;  
+        }
+    }
+}
+
+
+.contact-icon__text {
+    .theme-dark &{
+        color:$gray-1;
+    }
+    .theme-light &{
+        color:$white;
+    }
+    &:hover{
+        color:$white; 
+    }
+}

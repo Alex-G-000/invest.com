@@ -1,0 +1,11 @@
+.fs-graph{
+    &__graph-widget.card{
+        border: 0;
+        .card-body{
+            padding: 1.25rem;
+            .instrument__widjet-card{
+                margin: 0 .6rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.zc-footer-cta {  
+    position: relative;
+         
+    .block {
+
+        &__bg {
+            position: absolute;
+            left: 0; right: 0;
+            top: 0; bottom: 0;
+            display: block;  
+            background-position:50%;
+            background-repeat:no-repeat;
+            background-size:cover;
+            z-index: -1;         
+		}
+
+     
+		&__title {
+            font-size: 3.125rem;
+            @include media-breakpoint-down(sm){
+                font-size: 2rem;
+            }
+		}		
+
+		&__btn {
+           
+		}
+
+    }
+
+    &.skewed-section {
+
+        $skew-margin: -50px;
+        overflow: hidden;
+        padding-top: $section-padding-y*2 + $mb-inner;        
+        padding-bottom: $section-margin-bottom + $mb-inner;        
+        margin-bottom: $skew-margin;
+        z-index: 0;
+
+        .block__bg{
+            transform: skewY(-$section-skew-deg);
+            top: $skew-margin;
+        }
+
+    }
+    
+}
+
+
+footer.footer {
+    z-index: 5;
+}

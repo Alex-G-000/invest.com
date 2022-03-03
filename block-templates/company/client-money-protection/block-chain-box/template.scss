@@ -1,0 +1,53 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+
+.block-chain-box-content {
+
+	margin-bottom: 45px;
+	height: 100%;
+	@include media-breakpoint-down (md){
+		display: flex;
+		align-items: flex-start;
+	}
+	&__title {
+		font-size: 1.375rem;
+		color: $white;
+		@include media-breakpoint-down (sm) {
+			text-align: center;
+			margin: 0 auto 1.25rem auto;
+		} 
+	}
+
+	&__text {
+		color: $gray-1;
+		font-size: 1.0625rem;
+		line-height: 150%;
+		margin-bottom: 0;
+	}
+
+	.col-12 {
+		margin-bottom: 45px;
+	}
+
+	&__img i {
+		font-size: 2.3rem;
+		color: $primary;
+		&[class^="icon-"]:before,
+		&[class*=" icon-"]:before {
+			margin-left: 0;
+		}
+		@include media-breakpoint-down (md){
+			margin-right: 5px;
+		}
+	}
+}
+
+.theme-light .block-chain-box-content {
+
+	&__title {
+		color: #282844;
+
+	}
+
+}

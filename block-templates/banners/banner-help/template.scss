@@ -1,0 +1,27 @@
+@import '../../../scss/_variables';
+@import '../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.banner-help {
+    &__body {
+        text-align: center;
+        background: $gradient-light;
+        border-radius: $border-radius;
+        padding: 2.75rem;
+        h2{
+            text-align: center;
+            @include media-breakpoint-down(sm){
+                font-size: 2.75rem;
+            }
+        }
+        h4{
+            font-weight: 400;
+        }
+    }
+    &__icon{
+        svg{
+            width: 80px;
+            height: 80px;
+        }
+        
+    }
+}

@@ -1,0 +1,44 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.company-about-us-secondscreen-inner {
+	padding: 2.5rem 2.063rem;
+
+	&__header {
+		display: flex;
+		gap: 1.25rem;
+		align-items: center;
+
+		p {
+			margin-top: 0;
+			font-size: 1.563rem;
+			padding-bottom: 0;
+			@include media-breakpoint-down (md){
+				text-align: left;
+			}
+		}
+
+		span {
+			width: 1.5rem;
+			height: 1.5rem;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+
+			
+		}
+
+		img {
+			width: 1.5rem;
+		}
+	}
+
+	&__text{
+		p{
+			font-size: 1rem;
+			@include media-breakpoint-down (md){
+				text-align: left;
+			}
+		}
+	}
+}

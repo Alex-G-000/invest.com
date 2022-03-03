@@ -1,0 +1,79 @@
+@import '../../scss/_variables';
+@import '../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.banner-double {
+
+   &__left-col {
+      @include media-breakpoint-down (sm){ 
+            margin-bottom: $mb-inner;
+      }
+   }
+
+   &__left {
+      padding: 2.5rem 3rem;
+      border: 1px solid $border-color;
+      position: relative;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      background:$dark;
+      @include media-breakpoint-only (md){
+            padding: 1.5rem 1rem;   
+      }
+
+      /*
+      &:before{
+            position: absolute;
+            display: block;
+            top:2rem;
+            left: 1.8rem;
+            width:1.7rem;
+            height: 2rem;
+            background:url('./img/icons/quote.svg');
+            background-position:center;
+            background-repeat:no-repeat;
+            background-size:contain;
+      }
+      */
+
+      svg {
+            position: absolute;
+            display: block;
+            top:2rem;
+            left: 1.8rem;
+            transform: scale(0.95);
+            @include media-breakpoint-only (md){
+                  transform: scale(0.75);
+            }
+      }
+   }
+
+   &__left-text {
+      font-size: 1.5rem;
+      color: $white;
+      padding-left: 1.5rem;
+      padding-top: 2rem;
+      margin-bottom: 0;
+      @include media-breakpoint-only (lg){
+            font-size: 1.375rem;
+      }
+      @include media-breakpoint-only (md){
+            font-size: 1rem;
+            margin-bottom: 0;
+      }
+   }
+
+   &__right {
+      height: 100%;
+      border-radius:$border-radius;
+      overflow: hidden;
+   }
+
+   &__right-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;  
+   }
+           
+}

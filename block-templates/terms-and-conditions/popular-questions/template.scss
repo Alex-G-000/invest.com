@@ -1,0 +1,16 @@
+@import '../../../scss/_variables';
+@import '../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+
+
+.terms-and-conditions-pop-ques {
+	position: relative; 
+	padding: 0 0 120px 0;
+
+	&__title {
+		font-size: 3.65rem;
+		line-height: 130%;
+		font-weight: 600;
+		margin-bottom: 50px;
+	} 
+}

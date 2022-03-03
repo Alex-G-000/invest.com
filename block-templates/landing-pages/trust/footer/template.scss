@@ -1,0 +1,27 @@
+.trust-footer{
+    padding: 5rem 0;
+    position: relative;
+
+    .block__bg {
+        position: absolute;
+        left: 0; right: 0;
+        top: 0; bottom: 0;
+        display: block;  
+        background-position:center;
+        background-repeat:no-repeat;
+        background-size:cover;
+        z-index: -1;         
+    }
+
+    .section-header{
+        padding: 0;
+
+        &__header{
+            color: white;
+            font-size: 2.188rem;
+            max-width: 60rem;
+            margin: 0 auto;
+            margin-bottom: 2.5rem;
+        }
+    }
+}

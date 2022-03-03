@@ -1,0 +1,152 @@
+
+.nav-search-wrapper {
+    display: inline-block;
+    position: relative;
+    @include media-breakpoint-down(md){
+        width: 100%;
+    }
+}
+
+.nav-search {
+    .btn {
+        border-radius:$border-radius;
+    }
+    input {
+        border-radius:$border-radius; 
+    }
+
+    @include media-breakpoint-down(md){
+        display: flex;
+        justify-content: space-around;
+        flex:1;
+    }
+    @include media-breakpoint-up(lg){
+        position: absolute;
+        right: calc(100% + 0.5rem); 
+        width: 0;
+        opacity: 0;
+        transition: width 0.3s ease-in-out;       
+        .open &{           
+            opacity: 1;
+            @include media-breakpoint-only(lg){
+                width: 35rem;                
+            }
+            @include media-breakpoint-up(xl){
+                width: 39rem;               
+            }            
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top:-10px;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            display: block;
+            z-index: 1;
+            background:none;
+        }
+    }
+    
+    .input-group {
+        flex-wrap: nowrap;      
+        z-index: 3;  
+        @include media-breakpoint-up(lg){
+            overflow: hidden;
+        }
+        @include media-breakpoint-down(md){
+            border: 1px solid $border-color;
+            border-radius:$border-radius;
+        }
+    }
+    
+    &__input{       
+        @include media-breakpoint-up(lg){                
+            font-size: 1rem;
+            line-height: 1;
+            height: unset;             
+            &:focus {
+                box-shadow:none;
+            }         
+        }
+        @include media-breakpoint-down(md){
+            flex: 1;
+            border:none !important;
+        }    
+        .theme-dark &{
+            background: $dropdown-bg;
+        }
+        
+    }
+
+    &__button {       
+        padding: 0.4rem 0.9rem;
+        transition: color 0s;                
+        @include media-breakpoint-down(md){
+            flex: 0 0 3rem;            
+        } 
+        
+        .theme-light &{
+            color: $black; 
+            background:$white;
+        }
+        .theme-dark &{
+            background: $dropdown-bg;
+        }
+        i {
+            @include media-breakpoint-up(lg){                
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                transition-delay: 0.2s;
+                .open &{                    
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__open{
+        margin-right: 0.625rem;        
+        transition: color 0s;  
+        .theme-light &{
+            color: $black; 
+        } 
+        &:focus {
+            box-shadow: none;
+        }   
+    }
+}
+
+
+$switcher-width:2.75rem;
+$switcher-padding:0.5rem;
+$switcher-shift:1rem;
+
+.btn-switcher {
+    width: $switcher-width;
+    padding: 0;
+    overflow: hidden;    
+    &__container {        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: $switcher-width*2 + $switcher-shift;
+        transition: all 0.3s ease-in-out;        
+        .open &{
+            margin-left: -($switcher-width+$switcher-shift);
+        }    
+        i {
+            padding: $switcher-padding;
+            width: $switcher-width;
+            &:first-child {
+                margin-right: $switcher-shift;
+            }
+        }  
+        i.icon-cancel {
+            transform: rotate(0deg);
+            transition: transform 0.3s ease-in-out;
+            .open &{
+                transform: rotate(360deg); 
+            }
+        }  
+    }  
+}

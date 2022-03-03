@@ -1,0 +1,53 @@
+
+.page-header {
+	.seach-form {
+		@include media-breakpoint-down(sm){  width: 100%;  }      
+		.input-group {
+			@include media-breakpoint-down(sm) { width: 100%; }
+		}
+
+		&__input {
+			border-color: transparent;
+			border-radius:999px;
+			color:$white;
+			background:$dropdown-bg;
+			padding: 1.75rem 3rem;
+			.theme-light &{
+				color:$text-color-dark;
+				background:$white;  
+				border-color:$text-color-dark;             
+				&::placeholder{
+					color: $text-color-dark;
+				}
+			}
+			@include media-breakpoint-up(md){
+				min-width: 460px;
+			}
+			
+			&::placeholder{
+				color: $gray-1;
+			}
+		}
+
+		&__button {
+			border-radius:999px;
+			background:$dropdown-bg;
+			padding: 0 2rem;
+			transition: background-color 0s;
+			&:hover{
+				background:lighten(#12233A, 5); 
+			}
+			.theme-light &{
+				background:$white;
+				border-color:$text-color-dark;
+				border-left: 1px solid transparent;
+				&:hover{
+					background:darken($white, 5); 
+				}
+				svg path {
+					fill:$text-color-dark;
+				}
+			}
+		}
+	}
+}

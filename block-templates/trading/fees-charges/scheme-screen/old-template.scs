@@ -1,0 +1,372 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+
+.fees-charges {
+
+	.block {
+
+		// .block__title
+
+		&__title {
+			text-align: center;
+			margin-bottom: 6rem;
+
+			span {
+				text-align: center;
+				width: 100%;
+				display: block;
+				line-height: 150%;
+			}
+		}
+	}
+
+	.scheme-trading {
+
+		// .scheme-trading__row
+
+		&__row {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			@include media-breakpoint-down (md) {
+				flex-direction: column;
+			}
+		}
+
+		// .scheme-trading__list
+
+		&__list {
+			display: flex;
+			flex-direction: column;
+			max-width: 400px;
+			width: 100%;
+
+			@include media-breakpoint-down (lg) {
+				max-width: 310px;
+			}
+
+			&.right {
+				.scheme-trading__item {
+					.icon {
+						right: unset;
+						left: -30px;
+
+						@include media-breakpoint-down (md) {
+							left: 5px;
+							right: unset;
+						}
+					}
+
+					&:nth-child(1) {
+						.icon {
+							&::after {
+								content: '';
+								background: url('../../../../img/icons/scheme/top-right-line.png') center no-repeat;
+								display: block;
+								position: absolute;
+								bottom: 0;
+								left: -170%;
+								width: 92px;
+								height: 35px;
+
+								@include media-breakpoint-down (lg) {
+									width: 55px;
+									height: 20px;
+									background-size: cover;
+								}
+
+								@include media-breakpoint-down (md) {
+									display: none;
+								}
+							}
+						}
+					}
+
+					&:nth-child(2) {
+						.icon {
+							&::after {
+								content: '';
+								background: url('../../../../img/icons/scheme/middle-right.png') center no-repeat;
+								display: block;
+								position: absolute;
+								top: 50%;
+								transform: translateY(-50%);
+								left: -170%;
+								width: 92px;
+								height: 35px;
+
+								@include media-breakpoint-down (lg) {
+									width: 55px;
+									height: 2px;
+									background-size: cover;
+								}
+
+								@include media-breakpoint-down (md) {
+									display: none;
+								}
+							}
+						}
+					}
+
+					&:nth-child(3) {
+						.icon {
+							&::after {
+								content: '';
+								background: url('../../../../img/icons/scheme/bottom-right-line.png') center no-repeat;
+								display: block;
+								position: absolute;
+								bottom: 10px;
+								left: -170%;
+								width: 92px;
+								height: 35px;
+
+								@include media-breakpoint-down (lg) {
+									width: 55px;
+									height: 20px;
+									background-size: cover;
+								}
+
+								@include media-breakpoint-down (md) {
+									display: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		// .scheme-trading__item
+
+		&__item {
+			position: relative;
+			background: $dark-1;
+			border: 1px solid $border-color;
+			box-sizing: border-box;
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 2.5rem;
+			margin-bottom: 1.25rem;
+
+			@include media-breakpoint-down (lg) {
+				padding: 1.5rem;
+			}
+
+			@include media-breakpoint-down (md) {
+				justify-content: flex-start;
+				align-items: flex-start;
+				padding-left: 55px;
+			}
+
+			span {
+				font-style: normal;
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 110%;
+				color: #FFFFFF;
+
+				@include media-breakpoint-down (lg) {
+					font-size: 16px;
+				}
+			}
+
+			.icon {
+				background: $dark-1;
+				border: 1px solid $border-color;
+				box-sizing: border-box;
+				border-radius: 10px;
+				width: 60px;
+				height: 60px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: -30px;
+				left: unset;
+
+				@include media-breakpoint-down (lg) {
+					width: 40px;
+					height: 40px;
+					right: -20px;
+				}
+
+				@include media-breakpoint-down (md) {
+					left: 5px;
+					right: unset;
+				}
+
+				img {
+					width: 38px;
+					height: 38px;
+
+					@include media-breakpoint-down (lg) {
+						width: 19px;
+						height: 19px;
+					}
+				}
+			}
+
+			&:nth-child(1) {
+				.icon {
+					&::after {
+						content: '';
+						background: url('../../../../img/icons/scheme/top-left-line.png') center no-repeat;
+						display: block;
+						position: absolute;
+						bottom: 0;
+						right: -170%;
+						width: 92px;
+						height: 35px;
+
+						@include media-breakpoint-down (lg) {
+							width: 55px;
+							height: 20px;
+							background-size: cover;
+						}
+
+						@include media-breakpoint-down (md) {
+							display: none;
+						}
+					}
+				}
+			}
+
+			&:nth-child(2) {
+				.icon {
+					&::after {
+						content: '';
+						background: url('../../../../img/icons/scheme/middle-left.png') center no-repeat;
+						display: block;
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						right: -170%;
+						width: 92px;
+						height: 35px;
+
+						@include media-breakpoint-down (lg) {
+							width: 55px;
+							height: 2px;
+							background-size: cover;
+						}
+
+						@include media-breakpoint-down (md) {
+							display: none;
+						}
+					}
+				}
+			}
+
+			&:nth-child(3) {
+				.icon {
+					&::after {
+						content: '';
+						background: url('../../../../img/icons/scheme/bottom-left-line.png') center no-repeat;
+						display: block;
+						position: absolute;
+						bottom: 10px;
+						right: -170%;
+						width: 92px;
+						height: 35px;
+
+						@include media-breakpoint-down (lg) {
+							width: 55px;
+							height: 20px;
+							background-size: cover;
+						}
+
+						@include media-breakpoint-down (md) {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		// .scheme-trading__number
+
+		&__number {
+			span {
+				font-style: normal;
+				font-weight: 500;
+				font-size: 190px;
+				line-height: 110%;
+				color: #FFFFFF;
+				margin-bottom: 2rem;
+
+				@include media-breakpoint-down (lg) {
+					font-size: 110px;
+					line-height: 100%;
+				}
+			}
+
+			p {
+				font-style: normal;
+				font-weight: normal;
+				font-size: 20px;
+				line-height: 110%;
+				text-align: center;
+				color: #FFFFFF;
+			}
+
+			@include media-breakpoint-down (md) {
+				order: -1;
+			}
+		}
+
+		// .scheme-trading__list--right
+
+	}
+
+
+}
+
+.theme-light .fees-charges {
+
+	.scheme-trading__number span,
+	.scheme-trading__number p,
+	.scheme-trading__item span {
+		color: $darker;
+	}
+
+	.scheme-trading__item,
+	.scheme-trading__item .icon {
+		background: #EFF2F5;
+	}
+
+	.scheme-trading__item:nth-child(1) .icon::after {
+		background: url(../../../../img/icons/scheme/top-left-line--theme-light.png) center no-repeat;
+		background-size: 100%;
+	}
+
+	.scheme-trading__item:nth-child(2) .icon::after {
+		background: url(../../../../img/icons/scheme/middle-left--theme-light.png) center no-repeat;
+	}
+
+	.scheme-trading__item:nth-child(3) .icon::after {
+		background: url(../../../../img/icons/scheme/bottom-left-line--theme-light.png) center no-repeat;
+		background-size: 100%;
+	}
+
+	.scheme-trading__list.right .scheme-trading__item:nth-child(1) .icon::after {
+		background: url(../../../../img/icons/scheme/top-right-line--theme-light.png) center no-repeat;
+		background-size: 100%;
+	}
+
+	.scheme-trading__list.right .scheme-trading__item:nth-child(2) .icon::after {
+		background: url(../../../../img/icons/scheme/middle-right--theme-light.png) center no-repeat;
+	}
+
+	.scheme-trading__list.right .scheme-trading__item:nth-child(3) .icon::after {
+		background: url(../../../../img/icons/scheme/bottom-right-line--theme-light.png) center no-repeat;
+		background-size: 100%;
+	}
+
+}

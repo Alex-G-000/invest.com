@@ -1,0 +1,30 @@
+@import '../../../scss/_variables';
+@import '../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.instruments-fullwidth-widget {  
+    .widget-card {
+        overflow: hidden;
+        &__title {
+            text-transform: capitalize;
+        }
+        .card-header {
+            background: $gradient-light;
+            padding: 1rem 1.875rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-body {
+            flex-shrink: 0;
+        }
+        iframe {
+            min-height: 330px;
+            //width: calc( 100% + 5px) !important;
+        }  
+
+        select#toShow{
+            height: auto;
+        }     
+    }
+}
+

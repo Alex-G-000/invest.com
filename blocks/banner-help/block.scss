@@ -1,0 +1,20 @@
+@import '../../scss/_variables';
+@import '../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.banner-help {
+
+    // .banner-help__body
+
+    &__body {
+        text-align: center;
+        background: linear-gradient(83.79deg, #744AFF 0.3%, #7BCFFF 102.94%);
+        border-radius: 10px;
+        padding: 45px;
+        h2{
+            text-align: center;
+        }
+        h4{
+            font-weight: 400;
+        }
+    }
+}

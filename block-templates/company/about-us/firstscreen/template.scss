@@ -1,0 +1,48 @@
+
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.company-about-us-firstscreen {
+	margin: $mb-outer 0; //70px
+
+	.section-header__text {
+		font-size: 1.125rem; //18px
+		@include media-breakpoint-down(md) {
+			margin-bottom: 1rem;//16
+		}
+	}
+
+	.d-flex {
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__image {
+		text-align: center;
+		svg {
+			width: 100%;
+			@include media-breakpoint-up(lg) {
+				width: 80%;
+			}
+		}
+	}
+
+
+
+	@include media-breakpoint-down(md) {
+		.row {
+			flex-direction: column-reverse;
+			gap: 3.125rem;
+		}
+
+		.section-header__header {
+			margin: 0 auto;
+		}
+	}
+}
+
+.theme-light {
+	.company-about-us-firstscreen__logo {
+		fill: black;
+	}
+}

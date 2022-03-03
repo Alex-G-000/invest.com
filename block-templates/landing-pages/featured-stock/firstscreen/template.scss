@@ -1,0 +1,117 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.fs-firstscreen{
+    padding: 16.875rem 0; 
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    position: relative;
+        
+    /*&__skew-block-left{
+        position: absolute;
+        transform: skew(-10deg);
+        background: linear-gradient(104.91deg, #637CFF 36.1%, #7D56FF 87.64%);
+        height: 100%;
+        // width: calc(50% + 100px);
+        top: 0;
+        // left: 100px;
+        opacity: .8;
+        animation: 2s linear 0s skewed-left;
+        width: 500px;
+       left: calc(50% - 500px);
+    }
+
+    &__skew-block-right{
+        position: absolute;
+        transform: skew(-10deg);
+        background: linear-gradient(-104.91deg, #637CFF 36.1%, #7D56FF 87.64%);
+        height: 100%;
+        // width: calc(50% + 100px);
+        top: 0;
+        // right: -100px;
+        opacity: .8;
+        animation: 2s linear 0s skewed-right;
+        width: 500px;
+        right: calc(50% - 500px);
+    }*/
+
+    &__skew-block{
+        position: absolute;
+        transform: skew(-10deg);
+        background: linear-gradient(104.91deg, #637CFF 36.1%, #7D56FF 87.64%);
+        height: 100%;
+        top: 0;
+        opacity: .8;
+        width: 62.5rem;
+        left: calc(50% - 31.25rem);
+
+        @include media-breakpoint-down(lg){
+            width: 700px;
+            left: calc(50% - 350px);
+        }
+        @include media-breakpoint-down(md){
+            width: 600px;
+            left: calc(50% - 300px);
+        }
+        @include media-breakpoint-down(sm){
+            left: 0;
+            width: 100%;
+            transform: skew(0);
+            opacity: .7;
+        }
+    }
+
+    h1{
+        font-size: 3.188rem;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        @include media-breakpoint-down(sm){
+            font-size: 2.188rem;
+        }
+    }
+
+    h3{
+        font-size: 1.25rem;
+    }
+
+    &__logo{
+        position: absolute;
+        top: 3.75rem;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 3;
+        width: fit-content;
+    }
+}
+
+// @keyframes skewed-left {
+//    0% {
+//        width: 0;
+//        left: -100px;
+//    } 
+//    50% {
+//        width: calc(50% + 100px); 
+//        left: -100px;  
+          
+//    }
+//    100% {
+//        width: 500px;
+//        left: calc(50% - 500px);
+//    }
+// }
+
+// @keyframes skewed-right {
+//     0% {
+//         width: 0;
+//         right: -100px;
+//     } 
+//     50% {
+//         width: calc(50% + 100px);
+//         right: -100px;
+//     }
+//     100% {
+//         width: 500px;
+//         right: calc(50% - 500px);
+//     }
+// }

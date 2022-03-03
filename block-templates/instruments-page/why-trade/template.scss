@@ -1,0 +1,75 @@
+@import '../../../scss/_variables';
+@import '../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.instruments-why-trade {
+    .block{
+        &__header {
+            margin-bottom: $mb-outer;
+            @include media-breakpoint-down(sm){
+                margin-bottom: 0;
+            }
+        }
+        &__bottons {
+            @include media-breakpoint-down(sm){
+                text-align: center;
+            }
+        }
+        &__text {
+            h2,h3,h4 {
+                color:$white;
+                font-weight: 600;
+                padding-top: 0.5rem;
+                &:nth-of-type(1){
+                    padding-top: 0;
+                }
+            }
+        }
+        &__right {
+            figure {
+                box-shadow: 8px 8px 30px 0px #00000061;
+                border-radius:$border-radius;
+            }
+            z-index: 2;    
+            position: relative;
+            &:before {
+                display: block;
+                content: "";
+                width: 100%;
+                padding-top: (2 / 3) * 100%;
+            }
+            > .inner-image {           
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-position: center !important;
+                background-size: contain !important;
+                background-repeat: no-repeat !important;
+                .theme-light &{
+                    background-image:url('../../../img/instruments/why-trade-light-min.png');
+                }
+                .theme-dark &{
+                    background-image:url('../../../img/instruments/why-trade-dark-min.png');
+                }
+            }
+            
+        }
+       
+    }
+    
+}
+
+
+.theme-light {
+    .instruments-why-trade {
+        .block{           
+            &__text {
+                h2,h3,h4 {
+                    color:$text-color-dark;
+                }
+            }            
+        }
+        
+    }
+}

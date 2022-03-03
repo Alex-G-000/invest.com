@@ -1,0 +1,30 @@
+//core bootstrap for blog
+@import "blog-scss/_bootstrap-theme-blog";
+
+//general theme parts
+@import "theme-scss/_theme";
+@import "theme-scss/_nav";
+@import "theme-scss/_footer";
+@import "theme-scss/_elements";
+
+//color themes
+@import "theme-scss/_theme-dark";
+@import "theme-scss/_theme-light";
+
+//blog
+@import "blog-scss/_blog-general";
+@import "blog-scss/_article";
+@import "blog-scss/_category-page";
+
+//template parts
+@import "template-parts/blog/_archive-slider-category";
+@import "template-parts/blog/article-loops/_all-articles";
+@import "template-parts/blog/article-loops/_featured-fullwidth";
+@import "template-parts/blog/article-loops/_latest-fullwidth";
+@import "template-parts/blog/article-loops/_top-articles";
+@import "template-parts/blog/banner-after-blog/_banner";
+@import "template-parts/modal/_country-restrictions";
+@import "template-parts/search/_form-navbar";
+@import "template-parts/search/_form-page-header";
+
+

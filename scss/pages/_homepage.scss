@@ -1,0 +1,17 @@
+body.home {
+    section.cta-explore.block {
+        @include media-breakpoint-down(sm){
+            margin-bottom: 0;
+        }
+    }
+    section.banner-fullwidth-2 {
+        @include media-breakpoint-down(sm){
+            margin-bottom: 2.5rem;
+        }
+    }
+    section.blog-news.block {
+        @include media-breakpoint-down(sm){
+            padding-bottom: 0;
+        }
+    }
+}

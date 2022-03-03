@@ -1,0 +1,89 @@
+@import '../../../scss/_variables';
+@import '../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.cta-explore {
+
+    padding-top:$section-padding-y;
+    padding-bottom:0;
+
+    &__content-col {
+        display: flex;
+        align-items: center;       
+        padding-bottom:$section-padding-y; 
+       
+        @include media-breakpoint-up(md){
+            padding-top:$section-padding-y*2;
+            padding-bottom:$section-padding-y*3; 
+        }
+        @include media-breakpoint-down(md){
+            justify-content: center;
+        }          
+            
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        @include media-breakpoint-up(md){
+            padding-right: 3rem;           
+        }
+       
+        
+    }
+
+    &__header {
+        @include media-breakpoint-down(md){
+            text-align: center;
+        }
+        .section-header__header {
+            @include media-breakpoint-only(lg){
+                font-size: 2.8rem;    
+            }
+        } 
+    }
+
+    &__button {
+        margin-right: auto;
+        // margin-bottom: 2.375rem;
+        @include media-breakpoint-down(md){
+            margin-left: auto;         
+        }
+    }
+
+    &__buy-links {
+    }   
+
+    &__image-col { 
+        overflow: hidden;
+    }
+
+    &__image {       
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        &:before {
+            @include media-breakpoint-up(lg){
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: (546 / 747) * 100%;
+            background-position: bottom center !important;
+            background-size: contain !important;
+            background-repeat: no-repeat !important;
+            .theme-light &{
+                background-image:url('../../../img/homepage/cta-explore-light-min.png');
+            }
+            .theme-dark &{
+                background-image:url('../../../img/homepage/cta-explore-dark-min.png');
+            } 
+        } 
+                  
+    }
+}

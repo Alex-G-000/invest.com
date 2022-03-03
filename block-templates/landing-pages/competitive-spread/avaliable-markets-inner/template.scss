@@ -1,0 +1,50 @@
+.cs-avalible-markets-inner{
+    .item{
+        border: 1px solid #E7E9F5;
+        border-radius: 15px;
+        overflow: hidden;
+
+        &__top{
+            padding: 1.875rem 3rem 20px 3rem;
+            background-color: #fff;
+            img{
+                margin-bottom: 1.25rem;
+            }
+        }
+        &__bottom{
+            background-color: #F7F7F7;
+            padding: 0.563rem 0;
+
+            p{
+                color: #797C97;
+                font-size: 1.25rem;
+                display: flex;
+                align-items: baseline;
+                width: fit-content;
+                margin: 0 auto;
+
+                span{
+                    font-size: 1.875rem;
+                    background: -webkit-linear-gradient(108deg, #637CFF 25.48%, #5685FF 85.58%), #17182E;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    margin-right: 0.313rem;
+                }
+            }
+        }
+    }
+}
+
+.theme-dark{
+    .cs-avalible-markets-inner{
+        .item{
+            &__top{
+                background-color: #17182E;
+            }
+
+            &__bottom{
+                background-color: transparent;
+            }
+        }
+    }
+}

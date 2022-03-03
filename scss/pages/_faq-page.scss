@@ -1,0 +1,132 @@
+
+.faq-page {
+    padding-bottom: 2rem;
+    &__header { 
+        margin-bottom: 6rem;        
+    }
+    &__body {
+        margin-bottom: $section-padding-y;
+    }
+    &__content {
+        margin-bottom: $section-padding-y;
+    }   
+
+}
+
+.faq-list-category {
+
+    &__header {
+        font-size: 1.25rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        padding: 0.5rem 1rem;
+        height:80px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+    }
+
+    &__item {   
+        line-height: 1.6rem;
+        margin-bottom: 1rem; 
+        display: flex;           
+        align-items:center;
+    }
+
+    &__link {
+        font-size: 1.063rem;
+        //line-height: 2rem;
+        font-weight: 500;
+        letter-spacing: 0em;
+        text-align: left;
+
+        height:100%;
+        width: 100%;
+        position: relative;
+        padding-left: 2.375rem; 
+        
+
+        &:before{
+            content:'';
+            position: absolute;
+            width: 22px;
+            height:13px;
+            display: block;
+            background:$accordion-button-icon;
+            transition: all 0.2s ease-in-out;
+            transform: rotate(-90deg) scale(0.9) translateY(0);
+            opacity: 0.6;
+            left: 0;
+            top: 0.55rem;
+        }
+        &:hover {
+            &:before {
+               transform: rotate(-90deg) scale(0.9) translateY(6px);
+               opacity: 1;
+            }
+        }
+    }
+}
+
+
+
+
+.faq-tabs {
+    padding: 2rem 0;
+
+    .nav-link {
+        font-size: 1rem;
+        font-weight: 500;
+        color:$white;
+        padding: 0.75rem 1rem 0.75rem 2rem;
+        position: relative;
+        margin-bottom: 0.25rem;
+        .theme-light &{
+            color:$black;   
+        }
+        &.active {
+            &::before {
+                content:'';
+                display: block;
+                position: absolute;
+                top: 0; bottom: 0; left: 0;
+                width: 5px;
+                // background:$primary;
+                background:$gradient-light;
+            }
+        }
+        &:hover {
+            background:lighten($dark, 1);
+            .theme-light &{
+                background:darken($light, 3);
+            }
+        }        
+    }
+}
+
+.faq-tabContent {
+ padding: 3.125rem;
+    &__title {
+      font-size: 2rem;  
+      margin-bottom: 0.75rem;
+    }
+}
+
+.faq-answer {
+    padding: $mb-inner 0;
+    border-bottom: 1px solid $border-color;
+    &__title {
+    }
+    &__text {    
+    }
+    &__readmore {
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
