@@ -13,13 +13,13 @@
         if(!empty(block_value('background'))){
             $banner_bg = block_value('background');
         } else {
-            $banner_bg = $args['banner-background'];
+            $banner_bg = wp_get_attachment_image_url( $args['banner-background'], 'full' );
         }
     
         if(!empty(block_value('image'))){
             $banner_img = block_value('image');
         } else {
-            $banner_img = $args['banner-image'];
+            $banner_img = wp_get_attachment_image_url( $args['banner-image'], 'medium' );
         }
 
         if(!empty(block_value('link'))){
