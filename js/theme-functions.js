@@ -232,3 +232,28 @@ function loadInstrumentsPagination(resultSymbols, category, toShow, offset=0){
 		pagination.innerHTML = "";
 	}
 }
+
+
+//homepage instrumetns widget iframe
+function loadHomepageInstrumentsIframe(resultSymbols, category, largeChartUrl) {
+	let colorTheme;
+	if (getCookie('theme') === undefined) {
+		if (body.classList.contains('theme-light')) {			
+			colorTheme = 'light';
+		} else {			
+			colorTheme = 'dark';
+		}		
+	} else {
+		colorTheme = getCookie('theme').replace('theme-','');		
+	}
+
+	let urlStart  = `https://s.tradingview.com/embed-widget/market-quotes/?locale=en#{"width":"100%","height":"100%","symbolsGroups":[{"name":"${category}","originalName":"${category}","symbols":[`;
+	let urlEnd = `]}],"showSymbolLogo":true,"colorTheme":"${colorTheme}","isTransparent":true,"largeChartUrl":"${largeChartUrl}","utm_source":"localhost","utm_medium":"widget","utm_campaign":"market-quotes"}`;
+	let finalUrl = encodeURI(urlStart) + encodeURIComponent(resultSymbols) + encodeURIComponent(urlEnd);
+	
+	const instrumentsIframe = document.getElementById("homepage-instruments-deferred-frame");
+	instrumentsIframe.removeAttribute('src');
+	setTimeout(() => {
+		instrumentsIframe.setAttribute('src',finalUrl);
+	}, 50);
+}

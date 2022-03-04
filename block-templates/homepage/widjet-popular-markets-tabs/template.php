@@ -15,8 +15,7 @@
 ?>
 
 <?php 
-// wp_enqueue_script("script-id");  // load previously registered script
-// wp_enqueue_style('style-id'); // load some other registered styles
+	wp_enqueue_script("widjet-popular-markets-tabs");
 ?>
 
 <section class="popular-markets block <?php echo $some_class; ?>">

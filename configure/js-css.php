@@ -22,6 +22,7 @@ function inv_register_scripts() {
 	//blocks
 	wp_register_script( 'homepage-about-us', get_template_directory_uri() . '/block-templates/homepage/about-us/template.js', array('swiper'), null, true); 
 	wp_register_script( 'homepage-blog-news', get_template_directory_uri() . '/block-templates/homepage/news/template.js', array('swiper'), null, true); 	
+	wp_register_script( 'widjet-popular-markets-tabs', get_template_directory_uri() . '/block-templates/homepage/widjet-popular-markets-tabs/template.js', array('jquery', 'theme-functions'), null, true); 	
 	wp_register_script( 'blog-numbers-block', get_template_directory_uri() . '/blocks/counter-blog-numbers/block.js', array('theme-functions', 'countTo'), null, true);
 	wp_register_script( 'all-instruments-page', get_template_directory_uri() . '/block-templates/instruments-page/all-insruments/template.js', array('jquery'), null, true);
 	wp_register_script( 'instruments-widget-fullwidth', get_template_directory_uri() . '/block-templates/instruments-page/widget-fullwidth/template.js', array('jquery'), null, true);

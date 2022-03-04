@@ -79,7 +79,7 @@ wp_enqueue_script("all-instruments-page");
                     </a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="widget-card-nav__link nav-link" id="commodity-tab" role="tab" aria-selected="false" href="#crypto" data-category="crypto">
+                    <a class="widget-card-nav__link nav-link" id="crypto-tab" role="tab" aria-selected="false" href="#crypto" data-category="crypto">
                         <div class="widget-card-nav__link-inner">
                             <div class="widget-card-nav__icon">
                             <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">

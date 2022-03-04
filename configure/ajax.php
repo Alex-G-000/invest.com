@@ -131,6 +131,7 @@ function get_instruments_symbols() {
 //ajax get array of instruments symbols
 add_action( 'wp_ajax_getsymbols', 'ajax_getsymbols_action' );
 add_action( 'wp_ajax_nopriv_getsymbols', 'ajax_getsymbols_action' );
+
 function ajax_getsymbols_action() {
 	$widget_symbols = array();
 	$widget_categories = array('stocks', 'indices', 'forex', 'commodity', 'crypto');
@@ -162,6 +163,85 @@ function ajax_getsymbols_action() {
 		}
 		wp_reset_postdata();
 	}
+
+	wp_send_json_success(array(
+		'result' => $widget_symbols
+	));
+}
+
+
+
+//add script to get array of instruments homepage widget symbols
+add_action( 'wp_print_footer_scripts', 'get_instruments_homepage_widget_symbols', 90 );
+
+function get_instruments_homepage_widget_symbols() {
+	if ( is_front_page() ) {
+	?>
+		<script id="get_instruments_homepage_widget_symbols" type="text/javascript">
+
+			function get_instruments_homepage_widget_symbols(category) {
+
+				let resultSymbols;
+				let largeChartUrl = '<?php the_field('redirect-tradingview', 'options'); ?>';	
+
+				const ajaxurl = '<?php echo admin_url( "admin-ajax.php" ); ?>';
+
+				const data = {
+					action: 'getsymbols_acf',
+					category: category
+				}
+
+				$.ajax({
+					url: ajaxurl,
+					type: 'POST',
+					data: data,
+					dataType: 'json',
+					success: (response)=>{
+						if(response.success){
+							resultSymbols = response.data.result;
+							loadHomepageInstrumentsIframe(resultSymbols, category, largeChartUrl);														
+						}
+					},
+					error: (err)=>{
+						console.log(err)
+					}
+				})
+
+			}
+
+		</script>
+	<?php }
+}
+
+//ajax get array of instruments homepage widget symbols
+add_action( 'wp_ajax_getsymbols_acf', 'ajax_get_homepage_symbols_action' );
+add_action( 'wp_ajax_nopriv_getsymbols_acf', 'ajax_get_homepage_symbols_action' );
+
+function ajax_get_homepage_symbols_action() {
+
+	$widget_symbols = '';	
+	$current_acf = 'instruments_instruments-' . $_POST["category"] . '-widget';
+
+	if( have_rows($current_acf, 'options') ):
+		$count_rows = count(get_field($current_acf, 'options'));
+		$current = 0;  
+		while( have_rows($current_acf, 'options') ): the_row();    
+			$symbol = get_sub_field('symbol');          
+			$description = get_sub_field('description');     
+			if( $symbol !== "" ){
+				$current += 1;
+				$widget_symbols.= '{"name": "' . $symbol . '"' ;      
+				if( $description !== "" ) { 
+					$widget_symbols.= ',';
+					$widget_symbols.= '"displayName": "' . $description . '"';
+				}  
+				$widget_symbols.= '}';
+				if( $current !== $count_rows ) {
+					$widget_symbols.= ',';
+				}   
+			}    
+		endwhile;  
+	endif; 	
 
 	wp_send_json_success(array(
 		'result' => $widget_symbols
