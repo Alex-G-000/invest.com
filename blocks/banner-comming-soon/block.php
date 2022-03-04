@@ -40,7 +40,7 @@
      
  ?>
  
- <section class="banner-comming-soon block<?php block_field('additional-class'); ?>">
+ <section class="banner-comming-soon block <?php block_field('additional-class'); ?>">
      <div class="container">
          <div class="block__inner rounded" style="background-image:url('<?php echo $banner_soon_bg; ?>')" <?php echo $banner_soon_onclick; ?> >
              <div class="row">
