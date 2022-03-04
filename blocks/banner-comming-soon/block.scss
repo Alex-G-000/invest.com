@@ -1,0 +1,36 @@
+@import '../../scss/_variables';
+@import '../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.banner-comming-soon {
+	padding: 0;
+	.block{
+		&__inner {
+			background-position:center;
+			background-size: cover;
+		}
+		&__content {
+			display: flex;
+			align-items: center;
+			padding: 4rem;
+			justify-content: center;
+			@include media-breakpoint-up(sm){
+			}
+			@include media-breakpoint-up(md){
+				justify-content: flex-start;
+				padding-right: 0;				
+
+			}
+			
+		}
+		&__title {
+			margin-bottom: 3rem;
+			@include media-breakpoint-only(md){
+				font-size: 2.5rem;
+			}
+		}
+		&__image {
+			max-width: 21rem;
+		}
+	}
+
+}
