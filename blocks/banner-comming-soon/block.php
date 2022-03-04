@@ -3,6 +3,10 @@
     if ( get_field('homepage-banner-soon_enable', 'options') ) {
 
         $args = get_field('homepage-banner-soon', 'options');
+
+        echo '<pre>';
+        var_dump($args);
+        echo '</pre>';
         
         if(!empty(block_value('title'))){
             $title = block_value('title');

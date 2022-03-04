@@ -1,5 +1,3 @@
-
-
 <div class="block-preview">
     <?php if (empty(block_value('preview-image'))) { ?>
        <h3>Section</h3>
