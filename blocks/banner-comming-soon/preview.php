@@ -1,11 +1,10 @@
-
-
 <div class="block-preview">
-    <?php if (empty(block_value('preview-image'))) { ?>
-       <h3>Section</h3>
-    <?php } else { ?>
-        <img src="<?php block_field('preview-image'); ?>" alt="">
-    <?php } ?> 
-    <?php $template = str_replace(array("invest\\", "\\", ".php"), array("", "/", ""), block_value('template')); ?>
-    <div class="template-path"><p><?php echo $template; ?></p></div>
+    <?php 
+    if (get_field('homepage-banner-soon_banner-preview', 'options')) { ?>
+        <img src="<?php the_field('homepage-banner-soon_banner-preview', 'options'); ?>" alt="" class="preview-img"> 
+    <?php
+    } else {
+        echo '<h2>Banner comming soon</h2>';
+    }
+    ?>    
 </div>
