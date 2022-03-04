@@ -1,8 +1,7 @@
 @import '../../scss/_variables';
 @import '../../vendor/bootstrap/scss/mixins/breakpoints';
 
-.banner-comming-soon {
-	padding: 0;
+.banner-comming-soon {	
 	.block{
 		&__inner {
 			background-color: $dark;
