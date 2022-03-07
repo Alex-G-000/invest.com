@@ -17,15 +17,17 @@
             margin-right: 0.813rem;
             font-size: 1.25rem;
         }
+
+        &:last-child{
+            margin-bottom: 0;
+        }
     }
 
-    figure{
+    img {
+        width: 100%;
         @include media-breakpoint-down(sm){
             display: none;
-        }
-        img{
-            width: 100%;
-        }
+        }   
     }
 }
 
@@ -39,3 +41,4 @@
         background-color: #17182E;
     }
 }
+

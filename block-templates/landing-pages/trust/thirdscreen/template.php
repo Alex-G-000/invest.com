@@ -6,14 +6,12 @@
 'some_class'      => $some_class,
 'some_id'         => $some_id,
 'inner'           => $inner,
+'image'           => $image,
 'template_path'   => $template_path,
 'template_id'     => $template_id,
 ] = $args;
-?>
 
-<?php 
-// wp_enqueue_script("script-id");  // load previously registered script
-// wp_enqueue_style('style-id'); // load some other registered styles
+$image_obj = wp_get_attachment_image( $image, 'full');
 ?>
 
 
@@ -30,21 +28,10 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-7 d-flex flex-column justify-content-between mb-5 mb-lg-0">
-                <div class="trust-thirdscreen__item" data-aos="fade-up">
-                    <span class="icon-ok"></span>
-                    <p>Invest and trade stocks, indices, currencies, and many other instruments in a click of a button.</p>
-                </div>
-                <div class="trust-thirdscreen__item" data-aos="fade-up">
-                    <span class="icon-ok"></span>
-                    <p>Use our platform to get live market data from exchanges around the world.</p>
-                </div>
-                <div class="trust-thirdscreen__item mb-0" data-aos="fade-up">
-                    <span class="icon-ok"></span>
-                    <p>Client money protection - your funds are kept in segregated accounts that are protected by the Investors Compensation Fund (ICF)</p>
-                </div>
+                <?php echo $inner; ?>                
             </div>
             <div class="col-12 col-lg-5">
-                <?php echo $inner; ?>
+               <?php echo $image_obj; ?> 
             </div>
         </div>
     </div>
