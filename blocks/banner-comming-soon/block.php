@@ -11,9 +11,9 @@
         }   
         
         if(!empty(block_value('subtitle'))){
-            $title = block_value('subtitle');
+            $subtitle = block_value('subtitle');
         }else{
-            $title = $args['subtitle'];
+            $subtitle = $args['subtitle'];
         } 
     
         if(!empty(block_value('background'))){
