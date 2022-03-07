@@ -75,6 +75,10 @@ $(document).ready(function () {
 		}
 	})
 
+	$( ".footer-messege__expand-btn" ).click(function(e) {
+		e.preventDefault();
+		$(".footer-messege__text").toggleClass('expanded');
+	})
 
 
 	//navbar search

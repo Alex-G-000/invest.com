@@ -172,44 +172,42 @@ function ajax_getsymbols_action() {
 
 
 //add script to get array of instruments homepage widget symbols
-add_action( 'wp_print_footer_scripts', 'get_instruments_homepage_widget_symbols', 90 );
+add_action( 'wp_print_footer_scripts', 'get_instruments_homepage_widget_symbols', 9 );
 
 function get_instruments_homepage_widget_symbols() {
 	if ( is_front_page() ) {
 	?>
-		<script id="get_instruments_homepage_widget_symbols" type="text/javascript">
+<script id="get_instruments_homepage_widget_symbols" type="text/javascript">
 
-			function get_instruments_homepage_widget_symbols(category) {
+	function get_instruments_homepage_widget_symbols(category) {
 
-				let resultSymbols;
-				let largeChartUrl = '<?php the_field('redirect-tradingview', 'options'); ?>';	
-
-				const ajaxurl = '<?php echo admin_url( "admin-ajax.php" ); ?>';
-
-				const data = {
-					action: 'getsymbols_acf',
-					category: category
+		let resultSymbols;
+		let largeChartUrl = '<?php the_field('redirect-tradingview', 'options'); ?>';
+		const ajaxurl = '<?php echo admin_url( "admin-ajax.php" ); ?>';
+		
+		const data = {
+			action: 'getsymbols_acf',
+			category: category
+		}
+		$.ajax({
+			url: ajaxurl,
+			type: 'POST',
+			data: data,
+			dataType: 'json',
+			success: (response)=>{
+				if(response.success){
+					resultSymbols = response.data.result;
+					loadHomepageInstrumentsIframe(resultSymbols, category, largeChartUrl);														
 				}
-
-				$.ajax({
-					url: ajaxurl,
-					type: 'POST',
-					data: data,
-					dataType: 'json',
-					success: (response)=>{
-						if(response.success){
-							resultSymbols = response.data.result;
-							loadHomepageInstrumentsIframe(resultSymbols, category, largeChartUrl);														
-						}
-					},
-					error: (err)=>{
-						console.log(err)
-					}
-				})
-
+			},
+			error: (err)=>{
+				console.log(err)
 			}
+		})
 
-		</script>
+	}
+
+</script>
 	<?php }
 }
 

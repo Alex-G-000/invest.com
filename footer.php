@@ -11,13 +11,17 @@
 	$notice = 'cy-notice';
  }
  
- $disclaimer_text = get_field( $notice, 'options' ); 
+ $disclaimer_text = get_field( 'notice', 'options' ); 
+ $disclaimer_link = '<a class="text-white" href="' . get_field( 'document-links_risk-disclosure-statement', 'options' ) . '"><u>Risk Disclosure Statement</u></a>';
+ $footer_text = $disclaimer_text . ' ' . $disclaimer_link;
+ $footer_subtext = get_field( 'notice-footer', 'options' );
 ?>
 
 <div class="footer-messege sticky">
 	<div class="container">
 		<div class="footer-messege__box">
 			<div class="footer-messege__text">
+				<a href="#" class="footer-messege__expand-btn text-center"><i class="icon-up-open text-white"></i></a>
 				<p class="disclaimer">
 					<?php echo $disclaimer_text; ?>
 				</p>
@@ -27,11 +31,12 @@
 		?>
 			<div class="footer-messege__cookie justify-content-between">
 				<div class="d-flex align-items-md-center flex-md-row flex-column">
-					<p class="footer-messege__consent mr-0 mr-md-2">We need your consent</p>
-					<a href="#" class="footer__link hero__link mb-0 mt-1 mt-md-0">Privacy and policy</a>
+					<p class="footer-messege__consent text-left pr-2">By using the invest.com website you agree to the use of <a href="#" class="text-white"><u>cookies</u></a></p>
+					
 				</div>
 				<div class="d-flex align-items-center">
-					<div class="footer-messege__closed-btn btn btn-outline-secondary mr-0 mr-md-2">I agree</div>
+					<div class="footer-messege__closed-btn btn btn-outline-secondary mr-0 mr-md-2">Accept</div>
+					<div class="footer-messege__closed-btn btn btn-outline-secondary mr-0 mr-md-2 d-none d-md-block">Reject</div>
 					<p class="footer-messege__closed">
 						<svg width="14" height="14" viewBox="0 0 14 14" fill="none"
 							xmlns="http://www.w3.org/2000/svg">
@@ -183,11 +188,10 @@
 					<a href="<?php echo get_home_url() . '/documents/mu/terms-and-conditions' ?>" class="footer__link hero__link param_link">Terms & Conditions</a>
 				</div> -->
 
-				<div class="footer__links">
-					<a href="#" class="footer__link hero__link">Risk Disclosure Statement</a>
-					<a href="#" class="footer__link hero__link">Regulations</a>
-					<a href="#" class="footer__link hero__link">Compliance</a>
-					<a href="#" class="footer__link hero__link">Terms & Conditions</a>
+				<div class="footer__links">					
+					<a href="<?php the_field('document-links_terms-and-conditions', 'options'); ?>" class="footer__link hero__link">Terms & Conditions</a>
+					<a href="<?php the_field('document-links_compliance', 'options'); ?>" class="footer__link hero__link">Complaint Handling Procedure</a>
+					<a href="<?php the_field('document-links_regulations', 'options'); ?>" class="footer__link hero__link">Order Execution Policy</a>
 				</div>
 			</div>
 			
@@ -198,8 +202,11 @@
 
 	<div class="footer__warning-wrap w-100 py-3">
 		<div class="container">
-			<p class="footer__warning text-justify text-lg-left mb-0 disclaimer">
-				<?php echo $disclaimer_text; ?>
+			<p class="footer__warning text-justify text-lg-left mb-1 disclaimer">
+				<?php echo $footer_text; ?>
+			</p>
+			<p class="footer__warning text-justify text-lg-left mb-0 disclaimer">			
+				<?php echo $footer_subtext; ?>
 			</p>
 		</div>				
 	</div>
