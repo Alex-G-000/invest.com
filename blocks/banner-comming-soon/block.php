@@ -8,7 +8,13 @@
             $title = block_value('title');
         }else{
             $title = $args['title'];
-        }    
+        }   
+        
+        if(!empty(block_value('subtitle'))){
+            $title = block_value('subtitle');
+        }else{
+            $title = $args['subtitle'];
+        } 
     
         if(!empty(block_value('background'))){
             $banner_soon_bg = block_value('background');
@@ -45,7 +51,8 @@
          <div class="block__inner rounded" style="background-image:url('<?php echo $banner_soon_bg; ?>')" <?php echo $banner_soon_onclick; ?> >
              <div class="row">
                  <div class="block__content col-12 col-md-6 col-lg-7 text-center text-md-left">
-                     <h2 class="block__title text-white"><?php echo $title; ?></h2>                
+                     <h5 class="block__title text-white"><?php echo $title; ?></h5>                
+                     <h2 class="block__title text-white"><?php echo $subtitle; ?></h2>                
                  </div>
                  <div class="col-6 col-lg-5 d-none d-md-flex justify-content-center">
                      <img class="block__image" src="<?php echo $banner_soon_img; ?>" alt="" >
