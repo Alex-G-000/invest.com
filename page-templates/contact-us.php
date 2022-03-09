@@ -128,14 +128,10 @@
 					<div class="text-center text-md-left">
 						<h3 class="">Office Address</h3>
 						<p class="text-blog--dark mb-5">							
-							9 Kafkasou Street,<br> Treppides Tower floor 5,<br> 2112 Nicosia, Cyprus
+							<!-- 9 Kafkasou Street,<br> Treppides Tower floor 5,<br> 2112 Nicosia, Cyprus -->
+							6th Floor, Tower 1,<br> Nexteracom Building, Ebene, <br>Republic of Mauritius
 						</p>
-						<h3 class="">Phone</h3>
-						<p class="text-blog--dark mb-5">
-							<a href="tel:<?php the_field('company-info_phone-number', 'options'); ?>" class="company-info__phone"><?php the_field('company-info_phone-number', 'options'); ?></a><br>							
-							<a href="tel:<?php the_field('company-info_phone-number', 'options'); ?>" class="company-info__phone"><?php the_field('company-info_phone-number', 'options'); ?></a><br>							
-							<a href="tel:<?php the_field('company-info_phone-number', 'options'); ?>" class="company-info__phone"><?php the_field('company-info_phone-number', 'options'); ?></a>							
-						</p>
+						
 						<h3 class="">Email</h3>
 						<p class="text-blog--dark mb-5">
 							<a href="mailto:<?php the_field('company-info_contact-email', 'options'); ?>" class="company-info__link"><?php the_field('company-info_contact-email', 'options'); ?></a>
