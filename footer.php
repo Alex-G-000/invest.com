@@ -107,15 +107,26 @@
 				</div>
 				
 				<div class="footer__social">
-					<a href="<?php the_field('social-links_facebook', 'options'); ?>" class="footer__social-link">
-						<i class="icon-facebook"></i>
-					</a>
-					<a href="<?php the_field('social-links_twitter', 'options'); ?>" class="footer__social-link">
-						<i class="icon-twitter"></i>
-					</a>
-					<a href="<?php the_field('social-links_instagram', 'options'); ?>" class="footer__social-link">
-						<i class="icon-instagram"></i>
-					</a>
+					<?php if ( get_field('social-links_facebook', 'options') ){ ?>
+						<a href="<?php the_field('social-links_facebook', 'options'); ?>" class="footer__social-link">
+							<i class="icon-facebook"></i>
+						</a>
+					<?php } ?>
+					<?php if ( get_field('social-links_twitter', 'options') ){ ?>
+						<a href="<?php the_field('social-links_twitter', 'options'); ?>" class="footer__social-link">
+							<i class="icon-twitter"></i>
+						</a>
+					<?php } ?>
+					<?php if ( get_field('social-links_instagram', 'options') ){ ?>
+						<a href="<?php the_field('social-links_instagram', 'options'); ?>" class="footer__social-link">
+							<i class="icon-instagram"></i>
+						</a>
+					<?php } ?>
+					<?php if ( get_field('social-links_linkedin', 'options') ){ ?>
+						<a href="<?php the_field('social-links_linkedin', 'options'); ?>" class="footer__social-link">
+							<i class="icon-linkedin"></i>
+						</a>
+					<?php } ?>
 				</div>
 			</div>
 			<div class="col-12 col-sm-6 col-lg-2 pl-sm-0">

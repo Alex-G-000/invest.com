@@ -137,11 +137,19 @@
 							<a href="mailto:<?php the_field('company-info_contact-email', 'options'); ?>" class="company-info__link"><?php the_field('company-info_contact-email', 'options'); ?></a>
 						</p>
 						<h3 class="">Social Media</h3>
-						<ul class="list-unstyled text-blog--dark">			
-							<li class="mb-1"><a href="<?php the_field('social-links_instagram', 'options'); ?>" class="company-info__link mb-2"><i class="icon-instagram text-white--dark"></i> Instagram</a><br></li>
-							<li class="mb-1"><a href="<?php the_field('social-links_facebook', 'options'); ?>" class="company-info__link mb-2"><i class="icon-facebook text-white--dark"></i> Facebook</a><br></li>
-							<li class="mb-1"><a href="<?php the_field('social-links_twitter', 'options'); ?>" class="company-info__link mb-2"><i class="icon-twitter text-white--dark"></i> Twitter</a><br></li>
-							<li class="mb-1"><a href="<?php the_field('social-links_linkedin', 'options'); ?>" class="company-info__link"><i class="icon-linkedin text-white--dark"></i> LinkedIn</a></li>							
+						<ul class="list-unstyled text-blog--dark">
+							<?php if ( get_field('social-links_instagram', 'options') ){ ?>			
+								<li class="mb-1"><a href="<?php the_field('social-links_instagram', 'options'); ?>" class="company-info__link mb-2"><i class="icon-instagram text-white--dark"></i> Instagram</a><br></li>
+							<?php } ?>
+							<?php if ( get_field('social-links_facebook', 'options') ){ ?>	
+								<li class="mb-1"><a href="<?php the_field('social-links_facebook', 'options'); ?>" class="company-info__link mb-2"><i class="icon-facebook text-white--dark"></i> Facebook</a><br></li>
+							<?php } ?>
+							<?php if ( get_field('social-links_twitter', 'options') ){ ?>
+								<li class="mb-1"><a href="<?php the_field('social-links_twitter', 'options'); ?>" class="company-info__link mb-2"><i class="icon-twitter text-white--dark"></i> Twitter</a><br></li>
+							<?php } ?>
+							<?php if ( get_field('social-links_linkedin', 'options') ){ ?>
+								<li class="mb-1"><a href="<?php the_field('social-links_linkedin', 'options'); ?>" class="company-info__link"><i class="icon-linkedin text-white--dark"></i> LinkedIn</a></li>							
+							<?php } ?>
 						</ul>
 					</div>
 				</div>
