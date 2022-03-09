@@ -177,8 +177,7 @@
 			<div class="col-12 col-sm-6 col-lg-3 pl-sm-0 text-lg-right">
 				<h5 class="footer__menu-title">Office Address</h5>
 				<p class="nav-link">
-				<!-- 9 Kafkasou Street,<br> Treppides Tower floor 5,<br> 2112 Nicosia, Cyprus -->
-				6th Floor, Tower 1,<br> Nexteracom Building, Ebene, <br>Republic of Mauritius
+					<?php the_field('company-info_address', 'options'); ?>
 				</p>
 			</div>		
 
