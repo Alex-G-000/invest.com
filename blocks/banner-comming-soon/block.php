@@ -52,10 +52,10 @@
              <div class="row">
                  <div class="block__content col-12 col-md-7 text-center text-md-left d-flex align-items-center align-items-md-start">
                      <h5 class="block__small-text text-white mb-2"><?php echo $title; ?></h5>                
-                     <h2 class="block__title w-100 text-white"><?php echo $subtitle; ?></h2>                
+                     <h2 class="block__title w-100 text-white" data-aos="fade-up"><?php echo $subtitle; ?></h2>                
                  </div>
                  <div class="col-6 col-md-5 d-none d-md-flex justify-content-center align-items-end block__image-col">
-                     <img class="block__image" src="<?php echo $banner_soon_img; ?>" alt="" >
+                     <img class="block__image" src="<?php echo $banner_soon_img; ?>" alt=""  data-aos="fade-in">
                  </div>
              </div>
          </div>

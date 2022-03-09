@@ -24,7 +24,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-7 text-center text-md-left">
-                <h2><?php echo $title; ?></h2>
+                <h2  data-aos="fade-up"><?php echo $title; ?></h2>
                 <a href="<?php inv_show_download_link(); ?>" class="btn btn-secondary"><?php echo $button_text; ?></a>
                 <div class="buy-links">
                     <a href="<?php the_field('app-links_apple-download-link', 'options'); ?>" class="btn-app -store"></a>
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-5 d-none d-md-block">
-                <div class="banner-fullwidth-2__image"></div>
+                <div class="banner-fullwidth-2__image" data-aos="fade-in"></div>
             </div>
         </div>
     </div>    
