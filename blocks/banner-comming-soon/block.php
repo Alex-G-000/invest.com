@@ -50,11 +50,11 @@
      <div class="container">
          <div class="block__inner rounded" style="background-image:url('<?php echo $banner_soon_bg; ?>')" <?php echo $banner_soon_onclick; ?> >
              <div class="row">
-                 <div class="block__content col-12 col-md-6 col-lg-7 text-center text-md-left">
-                     <h5 class="block__title w-100 text-white mb-2"><?php echo $title; ?></h5>                
-                     <h2 class="block__subtitle w-100 text-white"><?php echo $subtitle; ?></h2>                
+                 <div class="block__content col-12 col-md-7 text-center text-md-left d-flex align-items-center align-items-md-start">
+                     <h5 class="block__small-text text-white mb-2"><?php echo $title; ?></h5>                
+                     <h2 class="block__title w-100 text-white"><?php echo $subtitle; ?></h2>                
                  </div>
-                 <div class="col-6 col-lg-5 d-none d-md-flex justify-content-center">
+                 <div class="col-6 col-md-5 d-none d-md-flex justify-content-center align-items-end block__image-col">
                      <img class="block__image" src="<?php echo $banner_soon_img; ?>" alt="" >
                  </div>
              </div>
