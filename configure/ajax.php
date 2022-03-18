@@ -84,7 +84,7 @@ function ajax_load_more_action() {
 
 
 
-//add script to get array of instruments symbols
+//add script to get array of instruments symbols (all-instruments page)
 add_action( 'wp_print_footer_scripts', 'get_instruments_symbols', 90 );
 
 function get_instruments_symbols() {
@@ -128,7 +128,7 @@ function get_instruments_symbols() {
 	<?php }
 }
 
-//ajax get array of instruments symbols
+//ajax get array of instruments symbols (all-instruments page)
 add_action( 'wp_ajax_getsymbols', 'ajax_getsymbols_action' );
 add_action( 'wp_ajax_nopriv_getsymbols', 'ajax_getsymbols_action' );
 
@@ -249,7 +249,7 @@ function ajax_get_homepage_tape_symbols_action() {
 }
 
 
-//add script to get array of instruments homepage widget symbols
+//add script to get array of instruments homepage widget symbols (tabs)
 add_action( 'wp_print_footer_scripts', 'get_instruments_homepage_widget_symbols', 11 );
 
 function get_instruments_homepage_widget_symbols() {
@@ -288,7 +288,7 @@ function get_instruments_homepage_widget_symbols() {
 	<?php }
 }
 
-//ajax get array of instruments homepage widget symbols
+//ajax get array of instruments homepage widget symbols (tabs)
 add_action( 'wp_ajax_getsymbols_acf', 'ajax_get_homepage_symbols_action' );
 add_action( 'wp_ajax_nopriv_getsymbols_acf', 'ajax_get_homepage_symbols_action' );
 
