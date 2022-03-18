@@ -4,15 +4,7 @@
 
 
 <?php
-
- $notice_type = getUrlParamValue( 'notice' );
- if ( isset($notice_type) && ( $notice_type == 'mu' || $notice_type == 'cy' ||  $notice_type == 'restricted' ) ) {	
-	$notice = $notice_type . '-notice';	
- } else {
-	$notice = 'cy-notice';
- }
-
- $disclaimer_text = get_field( $notice, 'options' ); 
+ $disclaimer_text = get_field( 'notice', 'options' ); 
 ?>
 
 
