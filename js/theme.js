@@ -67,6 +67,7 @@ $(document).ready(function () {
 		$(".footer-messege__cookie").fadeOut();
   		setCookie("footerMsg", "closed", 1);
 	});
+	/*
 	$(window).on('scroll', function(){
 		if ($('footer.footer').isOnScreen()){
 			$(".footer-messege").removeClass("sticky");
@@ -74,7 +75,7 @@ $(document).ready(function () {
 			$(".footer-messege").addClass("sticky");
 		}
 	})
-
+	*/
 	$( ".footer-messege__expand-btn" ).click(function(e) {
 		e.preventDefault();
 		$(".footer-messege__text").toggleClass('expanded');
