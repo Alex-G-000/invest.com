@@ -6,7 +6,7 @@ function inv_register_scripts() {
 	wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.5.1.min.js', array(), null, false);
 	// wp_register_script( 'popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', array('jquery'), null, false);    	
 	wp_register_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js', array('jquery'), null, false);
-	wp_register_script( 'theme-functions', get_template_directory_uri() . '/js/theme-functions.js', array('bootstrap'), '1.0.3', true);
+	wp_register_script( 'theme-functions', get_template_directory_uri() . '/js/theme-functions.js', array('bootstrap'), '1.0.4', true);
 	//tools
 	wp_register_script( 'swiper', get_template_directory_uri() . '/vendor/swiper-master/dist/swiper-bundle.min.js', array('jquery'), null, true);
 	wp_register_script( 'AOS', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array('jquery'), null, true);		
@@ -29,7 +29,7 @@ function inv_register_scripts() {
 	wp_register_script( 'top-weekly-block', get_template_directory_uri() . '/block-templates/homepage/widjet-top-weekly/template.js', array('jquery'), null, true);
 	wp_register_script( 'global-stocks-slider', get_template_directory_uri() . '/block-templates/homepage/global-stocks/template.js', array('jquery', 'swiper'), null, true);
 	//theme
-	wp_register_script( 'theme', get_template_directory_uri() . '/js/theme.js', array('theme-functions', 'AOS', 'bootstrap'), '1.1.9', true);
+	wp_register_script( 'theme', get_template_directory_uri() . '/js/theme.js', array('theme-functions', 'AOS', 'bootstrap'), '1.2.0', true);
 	//landing page
 	wp_register_script( 'competitive-spread-top-weekly', get_template_directory_uri() . '/block-templates/landing-pages/competitive-spread/widjet-top-weekly-1/template.js', array('jquery'), null, true);
 }
