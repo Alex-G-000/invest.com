@@ -74,6 +74,17 @@ function reloadIframe(from, to) {
 	}
 }
 
+
+//footer message
+let footerPadingTimeOut;
+function footerPading(){
+	let footerMsgHeight = $(".footer-messege").innerHeight();
+	$( "footer.footer" ).css("paddingBottom", footerMsgHeight);
+}
+function footerPadingFix(){
+	footerPadingTimeOut = setTimeout(footerPading, 50);
+}
+
 // check if mobile browser
 function isMobile(){
 	var hasTouchScreen = false;

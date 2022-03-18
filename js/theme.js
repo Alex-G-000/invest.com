@@ -59,22 +59,23 @@ $(document).ready(function () {
 
 
 	//footer message
-	let footerMsgHeight = $(".footer-messege").innerHeight();
-	$( "footer.footer" ).css("paddingBottom", footerMsgHeight);
-
+	footerPadingFix();
 	$( ".footer-messege__closed" ).click(function() {
 		$(".footer-messege__cookie").fadeOut();
   		setCookie("footerMsg", "closed", 1);
-		footerMsgHeight = $(".footer-messege").innerHeight();
-		$( "footer.footer" ).css("paddingBottom", footerMsgHeight);
+		footerPadingFix();
 	});
 	$( ".footer-messege__closed-btn" ).click(function() {
 		$(".footer-messege__cookie").fadeOut();
   		setCookie("footerMsg", "closed", 1);
-		footerMsgHeight = $(".footer-messege").innerHeight();
-		$( "footer.footer" ).css("paddingBottom", footerMsgHeight);
+		footerPadingFix();
 	});
 
+	$( ".footer-messege__expand-btn" ).click(function(e) {
+		e.preventDefault();
+		$(".footer-messege__text").toggleClass('expanded');
+		footerPadingFix();
+	});
 	/*
 	$(window).on('scroll', function(){
 		if ($('footer.footer').isOnScreen()){
@@ -86,12 +87,6 @@ $(document).ready(function () {
 	*/
 
 
-	$( ".footer-messege__expand-btn" ).click(function(e) {
-		e.preventDefault();
-		$(".footer-messege__text").toggleClass('expanded');
-		footerMsgHeight = $(".footer-messege").innerHeight();
-		$( "footer.footer" ).css("paddingBottom", footerMsgHeight);
-	})
 
 
 	//navbar search
