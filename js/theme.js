@@ -59,6 +59,9 @@ $(document).ready(function () {
 
 
 	//footer message
+	let footerMsgHeight = $(".footer-messege").innerHeight();
+	$( "footer.footer" ).css("paddingBottom", footerMsgHeight);
+
 	$( ".footer-messege__closed" ).click(function() {
 		$(".footer-messege__cookie").fadeOut();
   		setCookie("footerMsg", "closed", 1);
@@ -67,6 +70,7 @@ $(document).ready(function () {
 		$(".footer-messege__cookie").fadeOut();
   		setCookie("footerMsg", "closed", 1);
 	});
+
 	/*
 	$(window).on('scroll', function(){
 		if ($('footer.footer').isOnScreen()){
@@ -76,6 +80,8 @@ $(document).ready(function () {
 		}
 	})
 	*/
+
+
 	$( ".footer-messege__expand-btn" ).click(function(e) {
 		e.preventDefault();
 		$(".footer-messege__text").toggleClass('expanded');
