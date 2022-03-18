@@ -30,7 +30,7 @@ wp_enqueue_script("all-instruments-page");
 
             <ul class="widget-card-nav nav" role="tablist">
                 <li class="nav-item mb-2 mb-lg-0" role="presentation" data-aos="fade-up">
-                    <a class="widget-card-nav__link nav-link" role="tab" aria-selected="true" href="#indices" data-category="indices">
+                    <a class="widget-card-nav__link nav-link active" role="tab" aria-selected="true" href="#indices" data-category="indices">
                         <div class="widget-card-nav__link-inner">
                             <div class="widget-card-nav__icon">
                                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
