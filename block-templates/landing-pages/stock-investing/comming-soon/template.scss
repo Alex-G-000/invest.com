@@ -25,4 +25,8 @@
     .btn {
         min-width: 10rem;
     }
+    a.btn {
+        color:$white;
+        text-decoration: underline;
+    }
 }
