@@ -171,20 +171,96 @@ function ajax_getsymbols_action() {
 
 
 
+
+
+
+//add script to get array of homepage tape widget symbols
+add_action( 'wp_print_footer_scripts', 'get_tape_homepage_widget_symbols', 10 );
+
+function get_tape_homepage_widget_symbols() {
+	if ( is_front_page() && get_field('tape-widjet-deffered', 'options') ) {
+	?>
+
+<script id="get_tape_homepage_widget_symbols" type="text/javascript">
+	function get_tape_homepage_widget_symbols() {
+		let resultSymbols;
+		let showSymbolLogo = '<?php if ( get_field('tape-widjet-show-logos', 'options')) { echo 'true'; } else { echo 'false'; } ?>';
+		let largeChartUrl = '<?php the_field('redirect-tradingview', 'options'); ?>';
+		const ajaxurl = '<?php echo admin_url( "admin-ajax.php" ); ?>';		
+		const data = {
+			action: 'gettapesymbols_acf'			
+		}
+		$.ajax({
+			url: ajaxurl,
+			type: 'POST',
+			data: data,
+			dataType: 'json',
+			success: (response)=>{
+				if(response.success){
+					resultSymbols = response.data.result;
+					loadHomepageTapeIframe(resultSymbols, largeChartUrl, showSymbolLogo);														
+				}
+			},
+			error: (err)=>{
+				console.log(err)
+			}
+		})
+	}	
+	get_tape_homepage_widget_symbols(); 
+</script>
+
+	<?php }
+}
+
+//ajax get array of homepage tape widget symbols
+add_action( 'wp_ajax_gettapesymbols_acf', 'ajax_get_homepage_tape_symbols_action' );
+add_action( 'wp_ajax_nopriv_gettapesymbols_acf', 'ajax_get_homepage_tape_symbols_action' );
+
+function ajax_get_homepage_tape_symbols_action() {
+
+	$widget_symbols = '';	
+	$current_acf = 'tape-widjet';
+
+	if( have_rows('tape-widjet', 'options') ):
+        $count_rows = count(get_field('tape-widjet', 'options'));
+        $current = 0;  
+        while( have_rows('tape-widjet', 'options') ): the_row();    
+          $symbol = get_sub_field('symbol');          
+          $description = get_sub_field('description');     
+          if( $symbol !== "" ){
+              $current += 1;
+              $widget_symbols.= '{
+              "proName": "' . $symbol . '"' ;      
+              if( $description !== "" ) { 
+                $widget_symbols.= ',';
+                $widget_symbols.= '"title": "' . $description . '"';
+              }  
+              $widget_symbols.= '}';
+              if( $current !== $count_rows ) {
+                $widget_symbols.= ',';
+              }   
+          }    
+        endwhile;  
+      endif;  	
+
+	wp_send_json_success(array(
+		'result' => $widget_symbols
+	));
+}
+
+
 //add script to get array of instruments homepage widget symbols
-add_action( 'wp_print_footer_scripts', 'get_instruments_homepage_widget_symbols', 9 );
+add_action( 'wp_print_footer_scripts', 'get_instruments_homepage_widget_symbols', 11 );
 
 function get_instruments_homepage_widget_symbols() {
-	if ( is_front_page() ) {
+	if ( is_front_page() && get_field('instruments_deferred', 'options') ) {
 	?>
+
 <script id="get_instruments_homepage_widget_symbols" type="text/javascript">
-
 	function get_instruments_homepage_widget_symbols(category) {
-
 		let resultSymbols;
 		let largeChartUrl = '<?php the_field('redirect-tradingview', 'options'); ?>';
-		const ajaxurl = '<?php echo admin_url( "admin-ajax.php" ); ?>';
-		
+		const ajaxurl = '<?php echo admin_url( "admin-ajax.php" ); ?>';		
 		const data = {
 			action: 'getsymbols_acf',
 			category: category
@@ -204,10 +280,11 @@ function get_instruments_homepage_widget_symbols() {
 				console.log(err)
 			}
 		})
-
 	}
-
+	let category = $('#instruments-homepage-widget-data input[name="category"]').val();   
+    get_instruments_homepage_widget_symbols( category );
 </script>
+
 	<?php }
 }
 
@@ -245,3 +322,4 @@ function ajax_get_homepage_symbols_action() {
 		'result' => $widget_symbols
 	));
 }
+

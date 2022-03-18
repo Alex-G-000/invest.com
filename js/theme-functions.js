@@ -268,3 +268,31 @@ function loadHomepageInstrumentsIframe(resultSymbols, category, largeChartUrl) {
 		instrumentsIframe.setAttribute('src',finalUrl);
 	}, 50);
 }
+
+
+
+
+//homepage tape-ticker widget iframe
+function loadHomepageTapeIframe(resultSymbols, largeChartUrl, showSymbolLogo) {
+
+	let colorTheme;
+	if (getCookie('theme') === undefined) {
+		if (body.classList.contains('theme-light')) {			
+			colorTheme = 'light';
+		} else {			
+			colorTheme = 'dark';
+		}		
+	} else {
+		colorTheme = getCookie('theme').replace('theme-','');		
+	}
+
+	let urlStart  = `https://s.tradingview.com/embed-widget/ticker-tape/?locale=en#{"symbols":[`;
+	let urlEnd = `],"showSymbolLogo":${showSymbolLogo},"colorTheme":"${colorTheme}","isTransparent":true,"displayMode":"regular","largeChartUrl":"${largeChartUrl}","width":"100%","height":44,"utm_source":"localhost","utm_medium":"widget","utm_campaign":"ticker-tape"}`;
+	let finalUrl = encodeURI(urlStart) + encodeURIComponent(resultSymbols) + encodeURIComponent(urlEnd);
+
+	const tapeIframe = document.getElementById("homepage-tape-deferred-frame");
+	tapeIframe.removeAttribute('src');
+	setTimeout(() => {
+		tapeIframe.setAttribute('src',finalUrl);
+	}, 50);
+}

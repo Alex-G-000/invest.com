@@ -27,7 +27,7 @@ $image_obj = wp_get_attachment_image( $image, 'full');
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-lg-7 d-flex flex-column justify-content-between mb-5 mb-lg-0">
+            <div class="col-12 col-lg-7 d-flex flex-column justify-content-between mb-5 mb-lg-0 py-0 py-lg-4">
                 <?php echo $inner; ?>                
             </div>
             <div class="col-12 col-lg-5">

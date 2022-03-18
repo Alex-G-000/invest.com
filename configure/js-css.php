@@ -18,7 +18,7 @@ function inv_register_scripts() {
 	wp_register_script( 'search-page', get_template_directory_uri() . '/js/search-page.js', array('jquery', 'theme-functions'), null, true);
 	//template-parts
 	wp_register_script( 'archive-slider-category', get_template_directory_uri() . '/js/templte-parts/archive-slider-category.js', array('swiper'), null, true);  
-	wp_register_script( 'economic-calendar', get_template_directory_uri() . '/js/templte-parts/economic-calendar.js', array(), null, true);  
+	wp_register_script( 'economic-calendar', get_template_directory_uri() . '/js/templte-parts/economic-calendar.js', array(), null, true);  	
 	//blocks
 	wp_register_script( 'homepage-about-us', get_template_directory_uri() . '/block-templates/homepage/about-us/template.js', array('swiper'), null, true); 
 	wp_register_script( 'homepage-blog-news', get_template_directory_uri() . '/block-templates/homepage/news/template.js', array('swiper'), null, true); 	
