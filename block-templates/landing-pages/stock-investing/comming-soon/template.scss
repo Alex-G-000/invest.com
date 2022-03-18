@@ -21,12 +21,15 @@
 				margin: auto;
 			}
         }
+        &__subtitle{
+            a{
+                color:$white;
+                text-decoration: underline;
+            }
+        }
     }
     .btn {
         min-width: 10rem;
     }
-    a.btn {
-        color:$white;
-        text-decoration: underline;
-    }
+    
 }
