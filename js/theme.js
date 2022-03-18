@@ -61,14 +61,16 @@ $(document).ready(function () {
 	//footer message
 	footerPadingFix();
 	$( ".footer-messege__closed" ).click(function() {
-		$(".footer-messege__cookie").fadeOut();
+		$(".footer-messege__cookie").fadeOut(1000, function(){
+			footerPadingFix();
+		});	
   		setCookie("footerMsg", "closed", 1);
-		footerPadingFix();
 	});
 	$( ".footer-messege__closed-btn" ).click(function() {
-		$(".footer-messege__cookie").fadeOut();
+		$(".footer-messege__cookie").fadeOut(1000, function(){
+			footerPadingFix();
+		});		
   		setCookie("footerMsg", "closed", 1);
-		footerPadingFix();
 	});
 
 	$( ".footer-messege__expand-btn" ).click(function(e) {
@@ -86,7 +88,9 @@ $(document).ready(function () {
 	})
 	*/
 
-
+	$("#image").fadeOut(1000, function() {
+		console.log("Done fading, do something else");
+	});
 
 
 	//navbar search

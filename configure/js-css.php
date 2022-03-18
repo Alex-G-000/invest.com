@@ -29,7 +29,7 @@ function inv_register_scripts() {
 	wp_register_script( 'top-weekly-block', get_template_directory_uri() . '/block-templates/homepage/widjet-top-weekly/template.js', array('jquery'), null, true);
 	wp_register_script( 'global-stocks-slider', get_template_directory_uri() . '/block-templates/homepage/global-stocks/template.js', array('jquery', 'swiper'), null, true);
 	//theme
-	wp_register_script( 'theme', get_template_directory_uri() . '/js/theme.js', array('theme-functions', 'AOS', 'bootstrap'), '1.1.8', true);
+	wp_register_script( 'theme', get_template_directory_uri() . '/js/theme.js', array('theme-functions', 'AOS', 'bootstrap'), '1.1.9', true);
 	//landing page
 	wp_register_script( 'competitive-spread-top-weekly', get_template_directory_uri() . '/block-templates/landing-pages/competitive-spread/widjet-top-weekly-1/template.js', array('jquery'), null, true);
 }
