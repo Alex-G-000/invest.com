@@ -22,6 +22,9 @@
                 &:nth-of-type(1){
                     padding-top: 0;
                 }
+                .theme-light &{
+                    color:$text-color-dark;
+                }
             }
         }
         &__right {
@@ -46,12 +49,7 @@
                 background-position: center !important;
                 background-size: contain !important;
                 background-repeat: no-repeat !important;
-                .theme-light &{
-                    background-image:url('../../../img/instruments/why-trade-light-min.png');
-                }
-                .theme-dark &{
-                    background-image:url('../../../img/instruments/why-trade-dark-min.png');
-                }
+                
             }
             
         }
@@ -60,16 +58,34 @@
     
 }
 
+ .instruments-why-trade .block__right > .inner-image { 
 
-.theme-light {
-    .instruments-why-trade {
-        .block{           
-            &__text {
-                h2,h3,h4 {
-                    color:$text-color-dark;
-                }
-            }            
-        }
-        
+    .theme-light &{
+        background-image:url('../../../img/instruments/why-trade-light-min.png');
     }
+    .theme-dark &{
+        background-image:url('../../../img/instruments/why-trade-dark-min.png');
+    }
+
+    body.page-id-517.theme-light &{
+        background-image:url('../../../img/instruments/why-trade-index-light-min.png');
+    }
+    body.page-id-517.theme-dark &{
+        background-image:url('../../../img/instruments/why-trade-index-dark-min.png');
+    }
+    
 }
+
+
+// .theme-light {
+//     .instruments-why-trade {
+//         .block{           
+//             &__text {
+//                 h2,h3,h4 {
+//                     color:$text-color-dark;
+//                 }
+//             }            
+//         }
+        
+//     }
+// }
