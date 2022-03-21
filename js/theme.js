@@ -88,11 +88,7 @@ $(document).ready(function () {
 	})
 	*/
 
-	$("#image").fadeOut(1000, function() {
-		console.log("Done fading, do something else");
-	});
-
-
+	
 	//navbar search
 	$( ".nav-search__open" ).click(function() {
 

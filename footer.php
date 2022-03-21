@@ -4,6 +4,7 @@
 
 <?php
  $disclaimer_text = get_field( 'notice', 'options' ); 
+ $disclaimer_mob_text = 'Retail CFD accounts lose money'; 
  $disclaimer_link = '<a class="text-white" href="' . get_field( 'document-links_risk-disclosure-statement', 'options' ) . '"><u>Risk Disclosure Statement</u></a>';
  $footer_text = $disclaimer_text . ' ' . $disclaimer_link;
  $footer_subtext = get_field( 'notice-footer', 'options' );
@@ -16,6 +17,9 @@
 				<a href="#" class="footer-messege__expand-btn text-center"><i class="icon-up-open text-white"></i></a>
 				<p class="disclaimer">
 					<?php echo $disclaimer_text; ?>
+				</p>
+				<p class="disclaimer-mob">
+					<?php echo $disclaimer_mob_text; ?>
 				</p>
 			</div>
 		<?php 
