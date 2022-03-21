@@ -73,19 +73,19 @@
     body.page-id-517.theme-dark &{
         background-image:url('../../../img/instruments/why-trade-index-dark-min.png');
     }
+
+    body.page-id-529.theme-light &{
+        background-image:url('../../../img/instruments/why-trade-forex-light-min.png');
+    }
+    body.page-id-529.theme-dark &{
+        background-image:url('../../../img/instruments/why-trade-forex-dark-min.png');
+    }
+
+    body.page-id-535.theme-light &{
+        background-image:url('../../../img/instruments/why-trade-commodity-light-min.png');
+    }
+    body.page-id-535.theme-dark &{
+        background-image:url('../../../img/instruments/why-trade-commodity-dark-min.png');
+    }
     
 }
-
-
-// .theme-light {
-//     .instruments-why-trade {
-//         .block{           
-//             &__text {
-//                 h2,h3,h4 {
-//                     color:$text-color-dark;
-//                 }
-//             }            
-//         }
-        
-//     }
-// }
