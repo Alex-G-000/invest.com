@@ -6,7 +6,7 @@ function inv_register_scripts() {
 	wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.5.1.min.js', array(), null, false);
 	// wp_register_script( 'popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', array('jquery'), null, false);    	
 	wp_register_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js', array('jquery'), null, false);
-	wp_register_script( 'theme-functions', get_template_directory_uri() . '/js/theme-functions.js', array('bootstrap'), '1.0.4', true);
+	wp_register_script( 'theme-functions', get_template_directory_uri() . '/js/theme-functions.js', array('bootstrap'), '1.0.5', true);
 	//tools
 	wp_register_script( 'swiper', get_template_directory_uri() . '/vendor/swiper-master/dist/swiper-bundle.min.js', array('jquery'), null, true);
 	wp_register_script( 'AOS', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array('jquery'), null, true);		
@@ -29,7 +29,7 @@ function inv_register_scripts() {
 	wp_register_script( 'top-weekly-block', get_template_directory_uri() . '/block-templates/homepage/widjet-top-weekly/template.js', array('jquery'), null, true);
 	wp_register_script( 'global-stocks-slider', get_template_directory_uri() . '/block-templates/homepage/global-stocks/template.js', array('jquery', 'swiper'), null, true);
 	//theme
-	wp_register_script( 'theme', get_template_directory_uri() . '/js/theme.js', array('theme-functions', 'AOS', 'bootstrap'), '1.2.0', true);
+	wp_register_script( 'theme', get_template_directory_uri() . '/js/theme.js', array('theme-functions', 'AOS', 'bootstrap'), '1.2.1', true);
 	//landing page
 	wp_register_script( 'competitive-spread-top-weekly', get_template_directory_uri() . '/block-templates/landing-pages/competitive-spread/widjet-top-weekly-1/template.js', array('jquery'), null, true);
 }
@@ -47,7 +47,7 @@ add_action('wp_enqueue_scripts', 'inv_add_javascript', 100);
 //register STYLES
 add_action('wp_enqueue_scripts', 'inv_register_stylesheets');
 function inv_register_stylesheets() {		
-		$version = '1.2.7';
+		$version = '1.2.8';
 	//core
 	wp_register_style('theme', get_template_directory_uri() . '/css/style.css', array('AOS','invest-icons'), $version, 'all' );
 	wp_register_style('blog', get_template_directory_uri() . '/css/blog.css', array('AOS','invest-icons'), $version, 'all' );
