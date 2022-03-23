@@ -67,6 +67,11 @@
 .widget-card {
     &__title {
         text-transform: capitalize;
+        @include media-breakpoint-down(sm){
+            font-size: 1.25rem;
+            flex-grow: 1;
+            padding-right: 0.25rem;               
+        }
     }
     .card-header {
         background: $gradient-light;
@@ -74,6 +79,23 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include media-breakpoint-down(sm){
+            padding: 1rem 0.75rem;
+            border-bottom: 0;                
+            overflow: hidden;
+            justify-content: space-around;
+        }
+        select.form-control {                        
+            @include media-breakpoint-down(sm){
+                padding: 0.5rem;
+                width: 8.75rem;                                      
+            }
+        }
+    }
+    .card-body {
+        @include media-breakpoint-down(sm){
+            padding: 0 0.25rem;                
+        }
     }
     iframe {
        min-height: 330px;

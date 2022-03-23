@@ -109,7 +109,7 @@ wp_enqueue_script("all-instruments-page");
                         </select>                    
                     </form>
 				</div>
-				<div class="card-body bg-widget pt-1">                   
+				<div class="card-body bg-widget py-1">                   
                     <div class="" role="tabpanel">
                         <div class="tradingview-widget-container" id="instruments-widget" style="width: 100%; height: 100%;">                            
                             <iframe id="instruments-frame" scrolling="no" allowtransparency="true" frameborder="0" src="" style="box-sizing: border-box; height: 100%; width: 100%;"></iframe>  
