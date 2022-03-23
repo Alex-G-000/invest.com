@@ -18,6 +18,7 @@
             align-items: center;
             @include media-breakpoint-down(sm){
                 padding: 1rem;
+                border-bottom: 0;
             }
             select.form-control {                        
                 @include media-breakpoint-down(sm){
