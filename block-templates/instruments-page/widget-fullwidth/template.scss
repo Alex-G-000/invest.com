@@ -8,6 +8,8 @@
             text-transform: capitalize;
             @include media-breakpoint-down(sm){
                 font-size: 1.25rem;
+                flex-grow: 1;
+                padding-right: 0.25rem;               
             }
         }
         .card-header {
@@ -17,31 +19,26 @@
             justify-content: space-between;
             align-items: center;
             @include media-breakpoint-down(sm){
-                padding: 1 0.75rem;
-                border-bottom: 0;
-                word-wrap: normal;
+                padding: 1rem 0.75rem;
+                border-bottom: 0;                
                 overflow: hidden;
+                justify-content: space-around;
             }
             select.form-control {                        
                 @include media-breakpoint-down(sm){
                     padding: 0.5rem;
-                    width: 9rem;                                      
+                    width: 8.75rem;                                      
                 }
             }
         }
         .card-body {
             flex-shrink: 0;
             @include media-breakpoint-down(sm){
-                padding: 0 0.25rem;
-                margin: 0;
-                * {
-                    margin: 0;
-                }
+                padding: 0 0.25rem;                
             }
         }
         iframe {
-            min-height: 330px;
-            //width: calc( 100% + 5px) !important;
+            min-height: 336px;           
         }  
 
         select#toShow{

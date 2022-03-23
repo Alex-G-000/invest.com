@@ -2,7 +2,10 @@
 .faq-page {
     padding-bottom: 2rem;
     &__header { 
-        margin-bottom: 6rem;        
+        margin-bottom: 6rem;  
+        @include media-breakpoint-down(sm){
+            margin-bottom: 3rem;  
+        }
     }
     &__body {
         margin-bottom: $section-padding-y;
