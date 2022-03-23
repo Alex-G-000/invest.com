@@ -6,6 +6,9 @@
         overflow: hidden;
         &__title {
             text-transform: capitalize;
+            @include media-breakpoint-down(sm){
+                font-size: 1.25rem;
+            }
         }
         .card-header {
             background: $gradient-light;
@@ -13,9 +16,21 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            @include media-breakpoint-down(sm){
+                padding: 1rem;
+            }
+            select.form-control {                        
+                @include media-breakpoint-down(sm){
+                    padding: 0.5rem;
+                    width: 9rem;                                      
+                }
+            }
         }
         .card-body {
             flex-shrink: 0;
+            @include media-breakpoint-down(sm){
+                padding: 0 0.25rem;
+            }
         }
         iframe {
             min-height: 330px;
