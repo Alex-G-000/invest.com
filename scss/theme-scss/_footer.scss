@@ -221,8 +221,10 @@
 			}
 		}
 		.disclaimer-mob {
-			display: block;
-			font-size: 1rem;
+			@include media-breakpoint-down(sm){
+				display: block;
+				font-size: 1rem;
+			}
 		}
 
 		&.expanded {
