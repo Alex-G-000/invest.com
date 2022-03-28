@@ -105,22 +105,22 @@
 				<div class="footer__social">
 					<?php if ( get_field('social-links_facebook', 'options') ){ ?>
 						<a href="<?php the_field('social-links_facebook', 'options'); ?>" class="footer__social-link">
-							<i class="icon-facebook"></i>
+							<i class="icon-facebook"></i> <span>Facebook</span>
 						</a>
 					<?php } ?>
 					<?php if ( get_field('social-links_twitter', 'options') ){ ?>
 						<a href="<?php the_field('social-links_twitter', 'options'); ?>" class="footer__social-link">
-							<i class="icon-twitter"></i>
+							<i class="icon-twitter"></i> <span>Twitter</span>
 						</a>
 					<?php } ?>
 					<?php if ( get_field('social-links_instagram', 'options') ){ ?>
 						<a href="<?php the_field('social-links_instagram', 'options'); ?>" class="footer__social-link">
-							<i class="icon-instagram"></i>
+							<i class="icon-instagram"></i> <span>Instagram</span>
 						</a>
 					<?php } ?>
 					<?php if ( get_field('social-links_linkedin', 'options') ){ ?>
 						<a href="<?php the_field('social-links_linkedin', 'options'); ?>" class="footer__social-link">
-							<i class="icon-linkedin"></i>
+							<i class="icon-linkedin"></i> <span>Linkedin</span>
 						</a>
 					<?php } ?>
 				</div>
@@ -175,54 +175,48 @@
 				<p class="nav-link">
 					<?php the_field('company-info_address', 'options'); ?>
 				</p>
-			</div>		
-
-		</div>
-
-		<div class="row footer__info-row pl-2 pl-sm-0">
-			<div class="col-12 col-lg-auto footer__app-links app-links justify-content-center justify-content-lg-start mb-3 mb-lg-0">				
+				<div class="footer__app-links app-links mb-3">				
 					<a href="<?php the_field('app-links_apple-download-link', 'options'); ?>"
 						class="app-links__button btn-app -store"></a>
 					<a href="<?php the_field('app-links_google-download-link', 'options'); ?>"
 						class="app-links__button btn-app -google"></a>				
-			</div>
-			<div class="col footer__links-col text-center text-lg-right">
-				
-				<!-- <div class="footer__links">
-					<a href="<?php echo get_home_url() . '/documents/mu/risk-disclosure-statement' ?>" class="footer__link hero__link param_link">Risk Disclosure Statement</a>
-					<a href="<?php echo get_home_url() . '/documents/mu/regulations' ?>" class="footer__link hero__link param_link">Regulations</a>
-					<a href="<?php echo get_home_url() . '/documents/mu/compliance' ?>" class="footer__link hero__link param_link">Compliance</a>
-					<a href="<?php echo get_home_url() . '/documents/mu/terms-and-conditions' ?>" class="footer__link hero__link param_link">Terms & Conditions</a>
-				</div> -->
-
-				<div class="footer__links">					
-					<a href="<?php the_field('document-links_terms-and-conditions', 'options'); ?>" class="footer__link hero__link">Terms & Conditions</a>
-					<a href="<?php the_field('document-links_compliance', 'options'); ?>" class="footer__link hero__link">Complaint Handling Procedure</a>
-					<a href="<?php the_field('document-links_regulations', 'options'); ?>" class="footer__link hero__link">Order Execution Policy</a>
 				</div>
-			</div>
-			
+			</div>		
+
 		</div>
+
+		
 
 
 	</div>
 
 	<div class="footer__warning-wrap w-100 py-3">
 		<div class="container">
-			<p class="footer__warning text-justify text-lg-left mb-1 disclaimer">
+			<p class="footer__warning text-justify text-lg-left mb-1 mt-1 disclaimer">
 				<?php echo $footer_text; ?>
 			</p>
-			<p class="footer__warning text-justify text-lg-left mb-0 disclaimer">			
+			<p class="footer__warning text-justify text-lg-left mb-3 disclaimer">			
 				<?php echo $footer_subtext; ?>
 			</p>
+
+			<div class="row footer__info-row pl-2 pl-sm-0 pt-3">
+				<div class="col-12 col-lg-auto mb-3 mb-lg-0 order-2 order-lg-1">				
+					<div class="footer__copyright text-center w-100">©2022 Invest.com Ltd., All Rights reserved</div>
+				</div>
+				<div class="col footer__links-col order-1 order-lg-2 text-center text-lg-right mb-3 mb-lg-0">		
+					<div class="footer__links">					
+						<a href="<?php the_field('document-links_terms-and-conditions', 'options'); ?>" class="footer__link hero__link">Terms & Conditions</a>
+						<a href="<?php the_field('document-links_compliance', 'options'); ?>" class="footer__link hero__link">Complaint Handling Procedure</a>
+						<a href="<?php the_field('document-links_regulations', 'options'); ?>" class="footer__link hero__link">Order Execution Policy</a>
+					</div>
+				</div>			
+			</div>
+
 		</div>				
 	</div>
 
-	<div class="w-100  py-3">
-		<div class="container">
-			<div class="footer__copyright text-center w-100">©2022 Invest.com Ltd., All Rights reserved</div>
-		</div>
-	</div>
+	
+
 </footer>
 
 <?php get_template_part( 'template-parts/modal/country-restrictions', null, array() ); ?>
