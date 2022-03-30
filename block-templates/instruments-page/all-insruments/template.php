@@ -6,7 +6,7 @@ wp_enqueue_script("all-instruments-page");
 <section class="all-instruments block pt-0">
 		<div class="container">
 
-            <div class="all-instruments__header section-header mb-5 mt-section">
+            <div class="all-instruments__header section-header mb-5 mt-section <?php echo $args['some_class']; ?>">
                 <h1 class="section-header__header text-gradient"><?php echo $args['title']; ?></h1>  
                 <p class="section-header__text"><?php echo $args['subtitle']; ?></p>               
             </div>            
