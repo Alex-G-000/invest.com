@@ -18,7 +18,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 d-flex flex-column justify-content-center align-items-center text-white text-center">
-                <h5 class="block__small-text mb-4">Comming soon</h5>                
+                <h5 class="block__small-text mb-4">Coming soon</h5>                
                 <h1 class="block__title mb-4" data-aos="fade-up"><?php echo $title; ?></h2>
                 <p class="block__subtitle mb-5"><?php echo $subtitle; ?></p>   
             </div>
