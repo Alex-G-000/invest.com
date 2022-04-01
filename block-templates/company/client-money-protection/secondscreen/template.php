@@ -17,7 +17,7 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="cmp-second-screen__image col-12 col-md-6 col-lg-5 order-md-first text-center align-self-center" data-aos="fade-left">
+			<div class="cmp-second-screen__image col-12 col-md-6 col-lg-5 order-md-first text-center align-self-center" data-aos="fade-right">
 				<?php echo $inner; ?>
 			</div>
 
