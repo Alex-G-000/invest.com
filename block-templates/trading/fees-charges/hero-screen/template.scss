@@ -40,6 +40,10 @@
 		width: 70%;
 		padding-top: 70%;
 		margin: 0 auto;
+
+		.theme-light &{
+			background: $darker;
+		}
 	}
 
 	&__title {
@@ -84,20 +88,13 @@
 		width: 100%;
 		height: auto;
 	}
-}
-
-@include media-breakpoint-down (md) {
-	.fees-charges .wp-block-image img {
-   	 max-width: 100% !important;
-	}
-} 
 
 
-
-.theme-light {
-	.hero {
-		&__image-circle {
-			background: $darker;
+	.wp-block-image img {
+		@include media-breakpoint-down (md) {
+   		 	max-width: 100% !important;
 		}
 	}
 }
+
+
