@@ -32,8 +32,7 @@
 					<div class="scheme-trading__list">
 
 						<div class="scheme-trading__item" data-aos="flip-up" data-aos-delay="500">
-							<span>Opening. /
-								Closing trades</span>
+							<span>Opening / Closing trades</span>
 							<span class="icon">
 								<svg width="36" height="36" viewBox="0 0 38 38" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
