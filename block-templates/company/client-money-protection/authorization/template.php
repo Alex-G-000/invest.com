@@ -12,7 +12,7 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="cmp-authorization__image col-12 col-md-6 col-lg-5 order-lg-last text-center align-self-center" data-aos="fade-right">
+			<div class="cmp-authorization__image col-12 col-md-6 col-lg-5 order-md-last text-center align-self-center" data-aos="fade-right">
 				<?php echo $inner; ?>
 			</div>			
 
