@@ -176,10 +176,10 @@
 	.scheme-trading {
 		.wp-block-image img {			
 			@include media-breakpoint-up(lg){
-				max-width: 20rem;
+				max-width: 310px;
 			}
 			@include media-breakpoint-only(md){
-				max-width: 15.625rem;
+				max-width: 243px;
 			}			
 		}
 	}
