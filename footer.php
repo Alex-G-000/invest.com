@@ -13,7 +13,7 @@
 <div class="footer-messege sticky">
 	<div class="container">
 		<div class="footer-messege__box">
-			<div class="footer-messege__text">
+			<div class="footer-messege__text expanded">
 				<a href="#" class="footer-messege__expand-btn text-center"><i class="icon-up-open text-white"></i></a>
 				<p class="disclaimer">
 					<?php echo $disclaimer_text; ?>

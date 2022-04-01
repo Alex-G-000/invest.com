@@ -212,7 +212,7 @@
 	}
 
 	&__text{
-		padding: 1rem 0;		
+		padding: 0.5rem 0;		
 		@include media-breakpoint-down(lg){
 			font-size: 11.5px;	
 		}		
@@ -222,7 +222,7 @@
 			display: none;
 			@include media-breakpoint-down(sm){
 				display: block;
-				margin-top: -1rem;
+				margin-top: -0.5rem;
 				width: 100%;			
 				font-size: 1.5rem;
 				font-weight: 300;
