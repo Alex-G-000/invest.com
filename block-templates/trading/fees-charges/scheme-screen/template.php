@@ -16,7 +16,7 @@
 <section class="fees-charges block">
 	<div class="container">
 		<h2 class="block__title text-center">
-			<span class="text-gradient--dark text-gradient--light"><?php echo $title; ?></span><br>
+			<span class="text-gradient--dark text-gradient--light"><?php echo $title; ?></span>
 			<span class="text-gradient--dark text-gradient--light"><?php echo $subtitle; ?></span>
 		</h2>
 		<div class="scheme-trading">
