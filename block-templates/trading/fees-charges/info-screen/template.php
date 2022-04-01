@@ -23,7 +23,7 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-md-6 col-lg-7 order-2 order-md-1" data-aos="fade-right">
+			<div class="col-md-6 col-lg-7 order-2 order-md-1 d-flex flex-column justify-content-center" data-aos="fade-right">
 
 				<h2 class="text-gradient--dark text-gradient--light">
 

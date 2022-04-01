@@ -172,18 +172,16 @@
 	}
 }
 
-@media (max-width: 992px) {
-	.fees-charges {
-		.wp-block-image img {
-			max-width: 50%;
-		}
-	}
-}
 
-@media (max-width: 992px) {
 	.fees-charges {
-		.wp-block-image img {
-			max-width: 50%;
+		.wp-block-image img {			
+			@include media-breakpoint-up(lg){
+				max-width: 20rem;
+			}
+			@include media-breakpoint-only(md){
+				max-width: 15.625rem;
+			}			
 		}
 	}
-}
+
+
