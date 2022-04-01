@@ -48,6 +48,16 @@
 			text-align: center;
 		} 
 	}
+
+	&__link {
+		text-decoration: underline;
+		.theme-light &{
+			color: #282844;
+		}
+		.theme-dark &{
+			color: #797c97;
+		}
+	}
 		
 	
 }
