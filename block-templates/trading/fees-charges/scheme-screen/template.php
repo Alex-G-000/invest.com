@@ -16,7 +16,7 @@
 <section class="fees-charges block">
 	<div class="container">
 		<h2 class="block__title text-center">
-			<?php echo $title; ?><br>
+			<span class="text-gradient--dark text-gradient--light"><?php echo $title; ?></span><br>
 			<span class="text-gradient--dark text-gradient--light"><?php echo $subtitle; ?></span>
 		</h2>
 		<div class="scheme-trading">
@@ -30,8 +30,54 @@
 
 
 					<div class="scheme-trading__list">
+
+						<div class="scheme-trading__item" data-aos="flip-up" data-aos-delay="500">
+							<span>Opening. /
+								Closing trades</span>
+							<span class="icon">
+								<svg width="36" height="36" viewBox="0 0 38 38" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M36.1828 13.0096L34.746 1.19995L25.5672 8.38953L29.3367 10.0301L25.1979 20.1944L19.5208 13.4072L13.5938 25.0535L7.64611 19.1078L0.859375 35.0307L3.8821 36.4055L8.75575 24.9661L14.4626 30.6742L20.1904 19.4228L26.1769 26.5821L32.3804 11.3539L36.1828 13.0096Z"
+										fill="url(#paint0_linear_2707_52481)" />
+									<defs>
+										<linearGradient id="paint0_linear_2707_52481" x1="10.7115" y1="7.55177"
+											x2="36.1381" y2="15.8399" gradientUnits="userSpaceOnUse">
+											<stop stop-color="#637CFF" />
+											<stop offset="1" stop-color="#7D56FF" />
+										</linearGradient>
+									</defs>
+								</svg>
+
+							</span>
+						</div>
+
+						<div class="scheme-trading__item" data-aos="flip-up" data-aos-delay="400">
+							<span>Real time price quotes</span>
+								<span class="icon">
+									<svg width="36" height="36" viewBox="0 0 42 42" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_2707_52479)">
+											<path fill-rule="evenodd" clip-rule="evenodd"
+												d="M20.8347 41.6694C9.32743 41.6694 0 32.342 0 20.8347C0 9.32743 9.32743 0 20.8347 0C32.342 0 41.6694 9.32743 41.6694 20.8347C41.6694 32.342 32.342 41.6694 20.8347 41.6694ZM29.2988 24.9417C29.2988 21.6564 27.2466 19.8008 22.4455 18.6444V12.8628C23.9299 13.1675 25.3506 13.8069 26.74 14.8109L28.5097 11.9513C26.7666 10.6746 24.7192 9.87718 22.5718 9.63865V7.81301H19.8242V9.57745C15.876 9.88216 13.1923 12.1336 13.1923 15.419C13.1923 18.8567 15.3395 20.53 19.9505 21.6863V27.6502C17.897 27.3455 16.1925 26.4327 14.3916 25.0329L12.3706 27.8013C14.5339 29.4666 17.1114 30.5086 19.8242 30.8145V33.8564H22.5718V30.8445C26.5825 30.5098 29.2988 28.2883 29.2988 24.9417ZM19.9492 18.0051C17.5181 17.3058 16.9191 16.4842 16.9191 15.2054C16.9191 13.8681 17.9608 12.8029 19.9505 12.6506L19.9492 18.0051ZM25.572 25.154C25.572 26.615 24.4352 27.619 22.4455 27.7713V22.2645C24.9092 22.965 25.572 23.7854 25.572 25.1553V25.154Z"
+												fill="url(#paint0_linear_2707_52479)" />
+										</g>
+										<defs>
+											<linearGradient id="paint0_linear_2707_52479" x1="11.6221" y1="7.51804"
+												x2="41.6358" y2="17.2688" gradientUnits="userSpaceOnUse">
+												<stop stop-color="#637CFF" />
+												<stop offset="1" stop-color="#7D56FF" />
+											</linearGradient>
+											<clipPath id="clip0_2707_52479">
+												<rect width="41.6694" height="41.6694" fill="white" />
+											</clipPath>
+										</defs>
+									</svg>
+								</span>
+						</div>
+
 						<div class="scheme-trading__item" data-aos="flip-up">
-							<span>Withdrawals</span>
+							<span>Withdrawals and Deposits</span>
 							<span class="icon">
 								<svg width="36" height="36" viewBox="0 0 38 38" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -77,9 +123,9 @@
 								</svg>
 							</span>
 						</div>
+
 						<div class="scheme-trading__item" data-aos="flip-up" data-aos-delay="200">
-							<span>Rolling Into
-								A New Position</span>
+							<span>No Inactivity Fees</span>
 							<span class="icon">
 								<svg width="36" height="36" viewBox="0 0 42 42" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -100,72 +146,10 @@
 									</defs>
 								</svg>
 							</span>
-						</div>
-						<div class="scheme-trading__item" data-aos="flip-up" data-aos-delay="300">
-							<span>Executing Trades
-								And Closing Them</span>
-							<span class="icon">
-								<svg width="36" height="36" viewBox="0 0 42 42" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M22.1174 22.1174H41.6694C41.6694 32.9235 32.9235 41.6694 22.1174 41.6694V22.1174ZM0 19.552C0 8.74591 8.74591 0 19.552 0C30.358 0 39.1039 8.74591 39.1039 19.552H19.552V39.1039C8.78478 39.1039 0 30.358 0 19.552Z"
-										fill="url(#paint0_linear_2707_52477)" />
-									<defs>
-										<linearGradient id="paint0_linear_2707_52477" x1="11.6221" y1="7.51804"
-											x2="41.6358" y2="17.2688" gradientUnits="userSpaceOnUse">
-											<stop stop-color="#637CFF" />
-											<stop offset="1" stop-color="#7D56FF" />
-										</linearGradient>
-									</defs>
-								</svg>
-							</span>
-						</div>
-						<div class="scheme-trading__item" data-aos="flip-up" data-aos-delay="400"><span>Quotes on
-								the forex
-								market in real-time</ы>
-								<span class="icon">
-									<svg width="36" height="36" viewBox="0 0 42 42" fill="none"
-										xmlns="http://www.w3.org/2000/svg">
-										<g clip-path="url(#clip0_2707_52479)">
-											<path fill-rule="evenodd" clip-rule="evenodd"
-												d="M20.8347 41.6694C9.32743 41.6694 0 32.342 0 20.8347C0 9.32743 9.32743 0 20.8347 0C32.342 0 41.6694 9.32743 41.6694 20.8347C41.6694 32.342 32.342 41.6694 20.8347 41.6694ZM29.2988 24.9417C29.2988 21.6564 27.2466 19.8008 22.4455 18.6444V12.8628C23.9299 13.1675 25.3506 13.8069 26.74 14.8109L28.5097 11.9513C26.7666 10.6746 24.7192 9.87718 22.5718 9.63865V7.81301H19.8242V9.57745C15.876 9.88216 13.1923 12.1336 13.1923 15.419C13.1923 18.8567 15.3395 20.53 19.9505 21.6863V27.6502C17.897 27.3455 16.1925 26.4327 14.3916 25.0329L12.3706 27.8013C14.5339 29.4666 17.1114 30.5086 19.8242 30.8145V33.8564H22.5718V30.8445C26.5825 30.5098 29.2988 28.2883 29.2988 24.9417ZM19.9492 18.0051C17.5181 17.3058 16.9191 16.4842 16.9191 15.2054C16.9191 13.8681 17.9608 12.8029 19.9505 12.6506L19.9492 18.0051ZM25.572 25.154C25.572 26.615 24.4352 27.619 22.4455 27.7713V22.2645C24.9092 22.965 25.572 23.7854 25.572 25.1553V25.154Z"
-												fill="url(#paint0_linear_2707_52479)" />
-										</g>
-										<defs>
-											<linearGradient id="paint0_linear_2707_52479" x1="11.6221" y1="7.51804"
-												x2="41.6358" y2="17.2688" gradientUnits="userSpaceOnUse">
-												<stop stop-color="#637CFF" />
-												<stop offset="1" stop-color="#7D56FF" />
-											</linearGradient>
-											<clipPath id="clip0_2707_52479">
-												<rect width="41.6694" height="41.6694" fill="white" />
-											</clipPath>
-										</defs>
-									</svg>
-								</span>
-						</div>
-						<div class="scheme-trading__item" data-aos="flip-up" data-aos-delay="500">
-							<span>Opening. /
-								Closing trades</span>
-							<span class="icon">
-								<svg width="36" height="36" viewBox="0 0 38 38" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M36.1828 13.0096L34.746 1.19995L25.5672 8.38953L29.3367 10.0301L25.1979 20.1944L19.5208 13.4072L13.5938 25.0535L7.64611 19.1078L0.859375 35.0307L3.8821 36.4055L8.75575 24.9661L14.4626 30.6742L20.1904 19.4228L26.1769 26.5821L32.3804 11.3539L36.1828 13.0096Z"
-										fill="url(#paint0_linear_2707_52481)" />
-									<defs>
-										<linearGradient id="paint0_linear_2707_52481" x1="10.7115" y1="7.55177"
-											x2="36.1381" y2="15.8399" gradientUnits="userSpaceOnUse">
-											<stop stop-color="#637CFF" />
-											<stop offset="1" stop-color="#7D56FF" />
-										</linearGradient>
-									</defs>
-								</svg>
-
-							</span>
-						</div>
+						</div>				
+						
 						<div class="scheme-trading__item" data-aos="flip-up" data-aos-delay="600">
-							<span>Position rolling</span>
+							<span>No Markup</span>
 							<span class="icon">
 								<svg width="36" height="36" viewBox="0 0 38 38" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -180,9 +164,25 @@
 										</linearGradient>
 									</defs>
 								</svg>
-
 							</span>
 						</div>
+
+						<!-- <span class="icon">
+								<svg width="36" height="36" viewBox="0 0 42 42" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M22.1174 22.1174H41.6694C41.6694 32.9235 32.9235 41.6694 22.1174 41.6694V22.1174ZM0 19.552C0 8.74591 8.74591 0 19.552 0C30.358 0 39.1039 8.74591 39.1039 19.552H19.552V39.1039C8.78478 39.1039 0 30.358 0 19.552Z"
+										fill="url(#paint0_linear_2707_52477)" />
+									<defs>
+										<linearGradient id="paint0_linear_2707_52477" x1="11.6221" y1="7.51804"
+											x2="41.6358" y2="17.2688" gradientUnits="userSpaceOnUse">
+											<stop stop-color="#637CFF" />
+											<stop offset="1" stop-color="#7D56FF" />
+										</linearGradient>
+									</defs>
+								</svg>
+							</span> -->
+
 					</div>
 
 
