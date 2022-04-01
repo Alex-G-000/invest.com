@@ -3,6 +3,8 @@
 [
 'title'           => $title,
 'subtitle'        => $subtitle,
+'button_link'     => $button_link,
+'button_text'     => $button_text,
 'some_class'      => $some_class,
 'some_id'         => $some_id,
 'inner'           => $inner,
@@ -20,7 +22,7 @@
 					<?php echo $title; ?>
 				</h2>
 				<h3 class="cmp-full-protection__subtitle text-gray--dark" data-aos="fade-in">
-					<?php echo $subtitle; ?>
+					<?php echo $subtitle; ?> <a class="cmp-full-protection__link ml-1" href="<?php echo $button_link; ?>"><?php echo $button_text; ?></a>
 				</h3>
 			</div>	
         </div>
