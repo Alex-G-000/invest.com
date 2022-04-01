@@ -25,8 +25,7 @@
 				font-weight: 500;
 				font-size: 1.2rem;
 				line-height: 170%;
-				color: $gray-1;
-				margin-bottom: 50px;
+				color: $gray-1;				
 				@include media-breakpoint-down (sm) {
 					text-align: center;
 				} 
