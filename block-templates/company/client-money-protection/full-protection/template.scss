@@ -1,0 +1,53 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+
+.cmp-full-protection {
+	
+	overflow-x: hidden;
+
+	.container {
+		padding: 3.125rem;
+		background-size: cover;
+		background-position: center;
+		@include media-breakpoint-down(sm){
+			padding:2.5rem 1.25rem;
+			background-position: right;
+		}
+		.theme-light &{
+			background-color: #EFF2F5;
+			background-image:url('../../../../img/protection/protect-light-min.jpg');
+		}
+		.theme-dark &{
+			background-color: #17182E;
+			background-image:url('../../../../img/protection/protect-dark-min.jpg');
+		}
+	}
+
+	&__title {
+		font-size: 3rem;
+		@include media-breakpoint-only(lg) {
+			font-size: 2.75rem;
+		}
+		@include media-breakpoint-down (md) {			
+			font-size: 2rem;			
+		}	
+		@include media-breakpoint-down (sm) {
+			text-align: center;
+			margin: 0 auto;
+		}
+		
+	} 
+	
+	&__subtitle {
+		font-size: 1.0625rem;
+		line-height: 150%;
+		margin-bottom: 0;
+		font-weight: 500;
+		@include media-breakpoint-down (sm) {
+			text-align: center;
+		} 
+	}
+		
+	
+}

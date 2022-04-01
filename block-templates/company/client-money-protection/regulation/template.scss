@@ -1,0 +1,44 @@
+@import '../../../../scss/_variables';
+@import '../../../../vendor/bootstrap/scss/mixins/breakpoints';
+
+.cmp-regulation{
+    padding: 7.5rem 0;
+    
+    &__item{
+        margin-bottom: 1.25rem;
+        background-color: #EFF2F5;
+        padding: 2.063rem;
+        display: flex;
+
+        p{margin-bottom: 0;}
+
+        span{
+            color: #2DB071;
+            margin-right: 0.813rem;
+            font-size: 1.25rem;
+        }
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    img {
+        width: 100%;
+        @include media-breakpoint-down(sm){
+            display: none;
+        }   
+    }
+}
+
+.theme-light{
+    .cmp-regulation__item{
+        background-color: #EFF2F5;
+    }
+}
+.theme-dark{
+    .cmp-regulation__item{
+        background-color: #17182E;
+    }
+}
+
