@@ -245,7 +245,7 @@
 		.disclaimer-mob {
 			@include media-breakpoint-down(sm){
 				display: block;
-				// font-size: 1rem;
+				font-size: 12px;
 				text-align: left;
 			}
 		}
