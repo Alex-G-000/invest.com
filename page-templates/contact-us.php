@@ -29,10 +29,10 @@
 	<section class="contact-us-icons block pt-0 mb-0">
 		<div class="container"> 
 			<h4 class="block__title mb-5 mb-lg-3">
-				One-click trading most popular markets.
+				You are one click away from trading the most popular markets
 			</h4> 
 			<p class="block__subtitle text-gray mb-3">
-				Invest offers you multi-channel support 24/7, assistance in opening your account and performing various actions. 
+				invest.com offers you multi-channel 24/7 support, alomg with all the needed assistance in opening your account and performing the actions you need.
 			</p>
 			<div class="bg-dark rounded border py-5 px-4 mb-3">
 				<div class="row">
@@ -64,7 +64,7 @@
 								Email
 							</h4>    
 							<p class="contact-icon__text text-gray text-center mb-0">
-								Write us and describe the issue you are facing and get an in depth explanation as of how to continue
+								Write to us and tell us what you need, and we'll support and assist you as much as we can
 							</p>
 						</a>
 					</div>
