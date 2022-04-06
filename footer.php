@@ -219,6 +219,7 @@
 
 </footer>
 
+<?php inv_get_restricted_list(); ?>
 <?php get_template_part( 'template-parts/modal/country-restrictions', null, array() ); ?>
 
 <?php wp_footer(); ?>

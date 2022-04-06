@@ -120,9 +120,9 @@ $(document).ready(function () {
 	
 	// Country Restriction
 	//==================================
-	const restrictedCountries = ['United States', 'Canada', 'United Kingdom', 'Austria', 'Belgium', 'Bulgaria', 'Croatia', 'Republic of Cyprus', 'Czech Republic', 'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Ireland', 'Italy', 'Latvia', 'Lithuania', 'Luxembourg', 'Malta', 'Netherlands', 'Poland', 'Portugal', 'Romania', 'Slovakia', 'Slovenia', 'Spain', 'Sweden']
-	const muCountries = ['Chile'];
-	const cyCountries = ['Austria','Bulgaria','Croatia','Cyprus','Czech Republic', 'Czechia','Denmark','Estonia','Finland','Germany','Greece','Hungary','Ireland','Italy','Latvia','Lithuania','Luxembourg','Netherlands','Poland','Portugal','Romania','Slovakia','Slovenia','Spain','Sweden','Switzerland','Norway'];
+	// const restrictedCountries = ['United States', 'Canada', 'United Kingdom', 'Austria', 'Belgium', 'Bulgaria', 'Croatia', 'Republic of Cyprus', 'Czech Republic', 'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Ireland', 'Italy', 'Latvia', 'Lithuania', 'Luxembourg', 'Malta', 'Netherlands', 'Poland', 'Portugal', 'Romania', 'Slovakia', 'Slovenia', 'Spain', 'Sweden']
+	// const muCountries = ['Chile'];
+	// const cyCountries = ['Austria','Bulgaria','Croatia','Cyprus','Czech Republic', 'Czechia','Denmark','Estonia','Finland','Germany','Greece','Hungary','Ireland','Italy','Latvia','Lithuania','Luxembourg','Netherlands','Poland','Portugal','Romania','Slovakia','Slovenia','Spain','Sweden','Switzerland','Norway'];
 
 	async function getLocation() {
 		const url = `https://get.geojs.io/v1/ip/country.json`
@@ -146,19 +146,6 @@ $(document).ready(function () {
 				})	
 			}
 		})
-
-		// cyCountries.forEach(country => {			
-		// 	if(country === currentCountry.name){	
-		// 		setCookie('country', 'cy', 10)
-		// 	}
-		// })
-
-		// muCountries.forEach(country => {			
-		// 	if(country === currentCountry.name){	
-		// 		setCookie('country', 'mu', 10)
-		// 	}
-		// })
-
 
 	}
 

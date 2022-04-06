@@ -104,3 +104,17 @@ function inv_get_author_avatar ( $auth_id ) {
     } 
     return $auth_img;      
 }
+
+
+//get restricter counries
+function inv_get_restricted_list () {
+    if( have_rows('restricted-countries', 'options') ):
+        $country_list = '[';
+        while( have_rows('restricted-countries', 'options') ): the_row(); 
+          $country = get_sub_field('country'); 
+          $country_list.= '"' . $country . '",';
+        endwhile;
+        $country_list.= ']';
+        echo '<script> const restrictedCountries =' . $country_list . '</script>';    
+    endif;
+}
