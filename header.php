@@ -107,8 +107,8 @@
 							</button>
 							<div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
 								<a class="dropdown-item" href="#">English</a>
-								<a class="dropdown-item" href="#">Spanish</a>
-								<a class="dropdown-item" href="#">Arabic</a>								
+								<!-- <a class="dropdown-item" href="#">Spanish</a>
+								<a class="dropdown-item" href="#">Arabic</a>								 -->
 							</div>
 						</div>
 					</div>
