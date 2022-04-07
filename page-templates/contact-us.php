@@ -28,16 +28,16 @@
 	
 	<section class="contact-us-icons block pt-0 mb-0">
 		<div class="container"> 
-			<h4 class="block__title mb-5 mb-lg-3">
-				You are one click away from trading the most popular markets
-			</h4> 
-			<p class="block__subtitle text-gray mb-3">
-				invest.com offers you multi-channel 24/7 support, alomg with all the needed assistance in opening your account and performing the actions you need.
+			<!-- <h4 class="block__title mb-5 mb-lg-3">
+				invest.com offers you live, multilingual support on technical matters, or with general inquiries.
+			</h4>  -->
+			<p class="block__subtitle text-gray--light mb-3">
+				invest.com offers you live, multilingual support on technical matters, or with general inquiries.
 			</p>
 			<div class="bg-dark rounded border py-5 px-4 mb-3">
 				<div class="row">
 					
-					<div class="col-12 col-lg-4 contact-icon__col mb-5 mb-lg-0">
+					<div class="col-12 col-lg-6 contact-icon__col mb-5 mb-lg-0">
 						<a class="contact-icon d-flex flex-column justify-content-center align-items-center" href="<?php echo get_field('help-banner-support_button-link', 'options'); ?>">
 							<div class="contact-icon__icon mb-3">
 								<svg width="57" height="45" viewBox="0 0 57 45" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,15 +53,15 @@
 						</a>
 					</div>
 
-					<div class="col-12 col-lg-4 contact-icon__col mb-5 mb-lg-0">
+					<div class="col-12 col-lg-6 contact-icon__col mb-5 mb-lg-0">
 						<a class="contact-icon d-flex flex-column justify-content-center align-items-center" href="mailto:<?php the_field('company-info_contact-email', 'options'); ?>">
-							<div class="contact-icon__icon mb-3">
+							<div class="contact-icon__icon mb-3 pt-1">
 								<svg width="54" height="38" viewBox="0 0 54 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M49.2539 0H4.74609C2.13448 0 0 2.12684 0 4.75V33.25C0 35.8741 2.13585 38 4.74609 38H49.2539C51.8655 38 54 35.8732 54 33.25V4.75C54 2.12621 51.8645 0 49.2539 0ZM48.5251 3.16667C46.9907 4.70746 28.9665 22.8053 28.226 23.5488C27.6075 24.1697 26.3928 24.1701 25.774 23.5488L5.47488 3.16667H48.5251ZM3.16406 32.6679V5.33214L16.7764 19L3.16406 32.6679ZM5.47488 34.8333L19.0101 21.2428L23.5331 25.7844C25.3866 27.6454 28.6141 27.6447 30.467 25.7844L34.99 21.243L48.5251 34.8333H5.47488ZM50.8359 32.6679L37.2236 19L50.8359 5.33214V32.6679Z" fill="white"/>
 								</svg>
 							</div>
 							<h4 class="contact-icon__title text-white mb-3">
-								Email
+								Email 
 							</h4>    
 							<p class="contact-icon__text text-gray text-center mb-0">
 								Write to us and tell us what you need, and we'll support and assist you as much as we can
@@ -69,8 +69,8 @@
 						</a>
 					</div>
 
-					<div class="col-12 col-lg-4 contact-icon__col">
-						<a class="contact-icon d-flex flex-column justify-content-center align-items-center" href="tel:<?php the_field('company-info_phone-number', 'options'); ?>">
+					<!-- <div class="col-12 col-lg-4 contact-icon__col">
+						<a class="contact-icon d-flex flex-column justify-content-center align-items-center" href="#">
 							<div class="contact-icon__icon mb-3">
 								<svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M39.6812 29.5118C39.6087 29.4517 31.4238 23.5941 29.2029 23.9782C28.1356 24.1668 27.5247 24.8938 26.3015 26.3521C26.1047 26.5871 25.6305 27.1488 25.2642 27.5493C24.4911 27.2974 23.7371 26.9905 23.0078 26.6309C19.2434 24.7982 16.2018 21.7566 14.3691 17.9922C14.0095 17.2629 13.7026 16.5089 13.4507 15.7358C13.8525 15.3682 14.4156 14.8939 14.6561 14.6917C16.1062 13.4753 16.8332 12.8644 17.0218 11.7957C17.4086 9.58307 11.5483 1.39127 11.4882 1.31747C11.2213 0.938977 10.8737 0.624463 10.4705 0.39663C10.0673 0.168796 9.61858 0.0333263 9.15667 0C6.7814 0 0 8.79587 0 10.2787C0 10.3648 0.124367 19.1169 10.9169 30.0954C21.8831 40.8756 30.6352 41 30.7213 41C32.2041 41 41 34.2186 41 31.8433C40.9667 31.3813 40.8311 30.9324 40.603 30.5291C40.3749 30.1259 40.06 29.7784 39.6812 29.5118ZM30.571 38.2585C29.3765 38.1601 22.032 37.1911 12.8494 28.1697C3.78157 18.9379 2.8372 11.5729 2.7429 10.4318C4.5343 7.62005 6.69775 5.06353 9.17443 2.83173C9.2291 2.8864 9.30153 2.9684 9.39447 3.075C11.2939 5.66788 12.9301 8.44363 14.2789 11.3611C13.8403 11.8024 13.3767 12.2181 12.8904 12.6061C12.1363 13.1807 11.4438 13.832 10.824 14.5495L10.4919 15.0142L10.5903 15.5759C10.8795 16.8288 11.3225 18.0411 11.9091 19.1853C14.0109 23.5012 17.4985 26.9883 21.8147 29.0895C22.9587 29.677 24.1711 30.1204 25.4241 30.4097L25.9858 30.5081L26.4505 30.176C27.1707 29.5535 27.8247 28.8583 28.4021 28.1014C28.8298 27.5903 29.4025 26.9083 29.6184 26.7156C32.5442 28.0631 35.327 29.7013 37.925 31.6055C38.0384 31.7012 38.1177 31.775 38.171 31.8228C35.9396 34.3003 33.383 36.4642 30.571 38.2557V38.2585Z" fill="white"/>
@@ -83,7 +83,7 @@
 								Discuss with your account manager how to use the platform
 							</p>
 						</a>
-					</div>
+					</div> -->
 
 				</div>  
 			</div>   
